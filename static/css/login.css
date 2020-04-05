@@ -1,0 +1,78 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.header
+{
+    background: linear-gradient(rgba(0, 0, 0.7, 0), rgba(0, 0.3, 0, 0), rgba(0, 0, 0, 0.6)), 
+    url(../images/backgrounds/backg4.jpg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    text-align: center;
+}
+
+.login
+{
+    width: 350px;
+    height: 300px;
+    border-radius: 5%;
+    background :black;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    opacity: 85%;
+}
+
+.inputs
+{
+    padding-top: 60px;
+}
+
+.login img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.login input
+{
+    
+    background: transparent;
+    margin: 7px;
+    width: 300px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.login button
+{
+    
+    margin: 10px;
+    height: 35px;
+    width: 70px;
+    background: linear-gradient(cyan, white, skyblue);
+    border: 2px solid white;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.login label
+{
+    color: red;
+    font-family: monospace;
+}
