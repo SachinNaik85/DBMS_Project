@@ -25,7 +25,3 @@ def signup(request):
 
 def signed_up(request):
     return render(request, 'index.html')
-
-
-def search_place(request):
-    return render(request, 'search.html')

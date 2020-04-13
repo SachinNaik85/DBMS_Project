@@ -1,16 +1,18 @@
 {% load static %}
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBMS Project</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-   
+
 </head>
+
 <body>
-    <section class="header"> 
+    <section class="header">
         <div class="container">
             <img src="{% static 'images/logo.png' %}" class="logo">
             <img src="{% static 'images/tree.png' %}" class="tree">
@@ -18,24 +20,24 @@
                 {% csrf_token %}
                 <button type="submit" class="signup-btn">Sign up</button>
             </form>
-           <form action="login" method="post">
-               {% csrf_token %}
-                <button type="submit" class="login-btn" >Log in</button>
-           </form>
+            <form action="login" method="post">
+                {% csrf_token %}
+                <button type="submit" class="login-btn">Log in</button>
+            </form>
         </div>
-            <h2>Kidhar jana hai bhosdike?</h2>
+        <h2>Let us take you away.........</h2>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="search country or city">
-                <div class="input-group-append">
-                    <form action="searchplace" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="input-group-type-btn">search</button>
-                    </form>
-                </div>
+            <input type="text" class="form-control" placeholder="search state or city">
+            <div class="input-group-append">
+                <form action="searchplace" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="input-group-type-btn">search</button>
+                </form>
+            </div>
         </div>
     </section>
 
-<!--this is starting of features section-->
+    <!--this is starting of features section-->
 
     <section class="features">
         <h1>Featured destinations</h1>
@@ -44,15 +46,16 @@
                 <div class="column1">
                     <div class="feature box">
                         <div class="feature-image">
-                            <img src="{% static 'images/destination_1.jpg' %}">
+                            <img src="{% static 'images/dest/blore1.jpg' %}">
                             <div class="price">
                                 <label>Bengaluru</label>
                                 <p>Rs. 10000</p>
-                                <h6>3 days, 4 nights <br>
-                                    Bengaluru is one of the most beautiful city<br>
-                                    package includes WonderLa and cubbon park <br>
-                                    bus and flight service is available<br>
-                                </h6>
+                                <h6>3 days, 4 nights</h6>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Bengaluru is one of the most beautiful city<br> Package includes WonderLa and cubbon park <br> Bus and flight service is available
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -63,12 +66,13 @@
                             <img src="{% static 'images/coorg1.jpg' %}">
                             <div class="price">
                                 <label class="place">Coorg</label>
-                                <p>Rs. 7000</p>
-                                <h6>3 days, 4 nights <br>
-                                    Bengaluru is one of the most beautiful city<br>
-                                    package includes WonderLa and cubbon park <br>
-                                    bus and flight service is available<br>
-                                </h6>
+                                <p>Rs. 12000</p>
+                                <h6>4 days, 5 nights</h6>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Coorg is a hill town in southern india<br> Package includes Madikeri Fort and Abby falls <br> Bus service is available
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -76,34 +80,37 @@
                 <div class="column3">
                     <div class="feature box">
                         <div class="feature-image">
-                            <img src="{% static 'images/destination_3.jpg' %}">
+                            <img src="{% static 'images/dest/mumbai3.jpg' %}">
                             <div class="price">
                                 <label class="place">Mumbai</label>
                                 <p>Rs. 25000</p>
-                                <h6>3 days, 4 nights <br>
-                                    Bengaluru is one of the most beautiful city<br>
-                                    package includes WonderLa and cubbon park <br>
-                                    bus and flight service is available<br>
-                                </h6>
+                                <h6>5 days, 6 nights</h6>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Mumbai is India's largest city in west coast <br> Package includes gateway of india and Kanheri <br> caves. Bus and flight service is available
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>      <!-- this is end of class row 1 -->
+            </div>
+            <!-- this is end of class row 1 -->
             <br>
             <div class="row">
                 <div class="column1">
                     <div class="feature box">
                         <div class="feature-image">
-                            <img src="{% static 'images/destination_4.jpg' %}">
+                            <img src="{% static 'images/dest/kolkata 2.jpg' %}">
                             <div class="price">
                                 <label>Kolkatta</label>
                                 <p>Rs. 20000</p>
-                                <h6>3 days, 4 nights <br>
-                                    Bengaluru is one of the most beautiful city<br>
-                                    package includes WonderLa and cubbon park <br>
-                                    bus and flight service is available<br>
-                                </h6>
+                                <h6>4 days, 5 nights</h6>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    kolkata is known as "The City of Joy".<br> package includes Victoria memorial and Indian<br> Museum. Bus and flight service is available
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -111,15 +118,16 @@
                 <div class="column2">
                     <div class="feature box">
                         <div class="feature-image">
-                            <img src="{% static 'images/destination_8.jpg' %}">
+                            <img src="{% static 'images/dest/manali.jpg' %}">
                             <div class="price">
                                 <label class="place">Manali</label>
                                 <p>Rs. 40000</p>
-                                <h6>3 days, 4 nights <br>
-                                    Bengaluru is one of the most beautiful city<br>
-                                    package includes WonderLa and cubbon park <br>
-                                    bus and flight service is available<br>
-                                </h6>
+                                <h6>5 days, 6nights </h6>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Manali is a Himalayan resort town in India<br> Package includes Solang and Parvati Valley <br> Bus and Train service is available.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -127,51 +135,93 @@
                 <div class="column3">
                     <div class="feature box">
                         <div class="feature-image">
-                            <img src="{% static 'images/destination_6.jpg' %}">
+                            <img src="{% static 'images/dest/munnar2.jpg' %}">
                             <div class="price">
                                 <label class="place">Munnar</label>
                                 <p>Rs. 15000</p>
-                                <h6>3 days, 4 nights <br>
-                                    Bengaluru is one of the most beautiful city<br>
-                                    package includes WonderLa and cubbon park <br>
-                                    bus and flight service is available<br>
-                                </h6>
+                                <h6>3 days, 4 nights</h6>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Munnar is a town in western Ghats <br> package includes Nilgirim tahr and Lakkam <br> Waterfalls. bus and flight service is available
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>      <!-- this is end of class row 2-->
+            </div>
+            <!-- this is end of class row 2-->
         </div>
-    </section>  <!--thi is end of featured places seciton-->
+    </section>
+    <!--thi is end of featured places seciton-->
 
     <section class="testimonials">
-        <h1>hello sachin <br>this part is not devolped yet</h1>
+        <h1>User Review</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="review">
+                        <p>Genuinly the best money I've spent!
+                            I have had the absolute best trip in Madikeri.
+                            And also met some amazing people here.
+                        </p>
+
+                        <h5>Chetana hegde</h5>
+                        <small>Honnavara</small>
+
+                    </div>
+                    <img src="{% static 'images/dest/review/chetu1.jpg' %}">
+                </div>
+                <div class="col-md-4">
+                    <div class="review">
+                        <p> I would highly recommend this trip and anyone thinking about doing it. Manali is an amazing place!
+                        </p>
+                        <h5>Niranjana hegde</h5>
+                        <small>Sagara</small>
+
+                    </div>
+                    <img src="{% static 'images/dest/review/Niranjan.jpg' %}">
+                </div>
+
+                <div class="col-md-4">
+                    <div class="review">
+                        <p>Trip to Goa was absolutly amazing and the beaches really cool. Met some amazing people there.
+                        </p>
+
+                        <h5>R Vishwas</h5>
+                        <small>Bangalore</small>
+
+                    </div>
+                    <img src="{% static 'images/dest/review/vishwas.jpg' %}">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="contact-us">
         <h1>HAVE SOME QUESTIONS?</h1>
-            <div id="left" class="left-side"> 
-                <img src="{% static 'images/sign.svg' %}">
-                <br>
-                <h2>GIVE US A CALL</h2><br>
-                <label>SACHIN : +91 9611017485 </label><br>
-                <label>YASHASWINI : +91 7676888486</label>
-            </div>
+        <div id="left" class="left-side">
+            <img src="{% static 'images/sign.svg' %}">
+            <br>
+            <h2>GIVE US A CALL</h2><br>
+            <label>SACHIN : +91 9611017485 </label><br>
+            <label>YASHASWINI : +91 7676888486</label>
+        </div>
 
-            <div id="middle" class="middle-side">
-                <img src="{% static 'images/trekking.svg' %}"> <br>
-                <h2> COME AND DROP BY </h2> <br>
-                <label> UVCE KR CIRCLE</label> <br> 
-                <label>BANGALORE 560001</label>
-            </div>
+        <div id="middle" class="middle-side">
+            <img src="{% static 'images/trekking.svg' %}"> <br>
+            <h2> COME AND DROP BY </h2> <br>
+            <label> UVCE KR CIRCLE</label> <br>
+            <label>BANGALORE 560001</label>
+        </div>
 
-            <div id="right" class="right-side">
-                <img src="{% static 'images/around.svg' %}">
-                <h2>SEND US A MESSEGE</h2> <br>
-                <label> yashu1999.m@gmail.com </label> <br>
-                <label> naiksachin8585@gmail.com</label>
-            </div>
+        <div id="right" class="right-side">
+            <img src="{% static 'images/around.svg' %}">
+            <h2>SEND US A MESSEGE</h2> <br>
+            <label> yashu1999.m@gmail.com </label> <br>
+            <label> naiksachin8585@gmail.com</label>
+        </div>
     </section>
 </body>
-</html>
 
+</html>

@@ -1,14 +1,12 @@
-*
-{
+* {
     padding: 0;
     margin: 0;
 }
 
-.header
-{
+.header {
     height: 100%;
     padding-top: 30px;
-    background-image: linear-gradient(rgba(0, 0, 0.6, 0), rgba(0, 0.6, 0, 0)), url(../images/home.jpg);
+    background-image: linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.6, 0.6, 0.6, 0.6)), url(../images/home.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -16,21 +14,18 @@
     color: white;
 }
 
-.logo
-{
+.logo {
     width: 200px;
     float: left;
 }
 
-.tree
-{
+.tree {
     width: 150px;
     float: right;
     position: relative;
 }
 
-.login-btn
-{
+.login-btn {
     margin: 5px;
     width: 70px;
     outline: none !important;
@@ -44,8 +39,7 @@
     right: 250px;
 }
 
-.signup-btn
-{
+.signup-btn {
     margin: 5px;
     width: 70px;
     outline: none !important;
@@ -59,64 +53,58 @@
     right: 170px;
 }
 
-.signup-btn a
-{
+.signup-btn a {
     color: white;
 }
 
+
 /* this h2 for is printing let us take you away */
-.header h2      
-{
+
+.header h2 {
     font-weight: 400;
     padding-top: 200px;
     text-align: center;
     font-size: 70px;
-    color: white; 
+    color: white;
 }
 
-.input
-{
+.input {
     width: 450px;
-    background : transparent;
+    background: transparent;
     border: 2px solid;
     border-radius: 30px;
     color: white;
     text-align: center;
 }
 
-.search-btn
-{
-    
+.search-btn {
     width: 80px;
-    background : transparent;
+    background: transparent;
     border: 2px solid;
     border-radius: 50px;
     color: white;
     text-align: center;
 }
 
-.input-group
-{
+.input-group {
     width: 90%;
     max-width: 450px;
     border-radius: 30px;
     background-color: white;
-    padding : 2px;
+    padding: 2px;
     margin: auto;
 }
 
-.form-control
-{
+.form-control {
     border: 0 !important;
     border-radius: 30px !important;
     margin: 2 px;
     box-shadow: none !important;
 }
 
-.input-group-type-btn
-{
+.input-group-type-btn {
     width: 70px;
-    height : 30px;
+    height: 35px;
     background-image: linear-gradient(grey, black, green);
     border: 0 px;
     border-radius: 30px;
@@ -126,38 +114,38 @@
     box-shadow: none;
 }
 
+
 /* features starts here */
-.features
-{
+
+.features {
     padding: 70px 0px;
-    background-color: white;
-    background-size: cover;
-    background-position: center;
+    background : white;
 }
 
+
 /* this is to print "featured destination" */
-.features h1
-{
+
+.features h1 {
     font-weight: 400;
     text-align: center;
     font-size: 60px;
-    color: black; 
+    color: black;
 }
 
-.row
-{
+.row {
     padding: 20px 0px;
 }
 
-.feature-image img
-{
+.feature-image img {
     width: 350px;
     height: 250px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.price label    /* this is place name*/
+.price label
+/* this is place name*/
+
 {
     font-weight: 100;
     margin-left: 15px;
@@ -168,7 +156,9 @@
     font-family: serif;
 }
 
-.price p       /* this is for printing the price */
+.price p
+/* this is for printing the price */
+
 {
     margin-left: 15px;
     margin-right: 15px;
@@ -179,38 +169,78 @@
     text-align: center;
     padding: 2px;
     background-image: repeating-radial-gradient(cyan, skyblue, gray);
-    color:black;
+    color: black;
     font-size: 18px;
     font-weight: 600;
 }
 
-
-.price h6
-{
+.detail {
     margin-left: 15px;
     margin-right: 15px;
     color: black;
-    
+}
+
+.price h6 {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: black;
 }
 
 
 /* this is begining of about section */
 
-.testimonials
-{
-    height: 100%;
-    width: 100%;
+.testimonials {
+    padding: 100px 0;
+    height : 100%;
     background-size: cover;
     background-position: center;
+    background : linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.6, 0.6, 0.6, 0.6)),
+        url(../images/dest/backgrounds/backg7.jpg);
 }
 
+h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.review {
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+    padding-bottom: 50px;
+}
+
+.review p {
+    padding: 50px 10px 10px 10px;
+}
+
+.testimonials img {
+    width: 80px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    margin: -35px 0 20px 40%;
+}
+
+.review p::before {
+    content: '\201d';
+    display: block;
+    position: absolute;
+    font-size: 100px;
+    color: rgb(63, 144, 219);
+    left: 44%;
+    top: -20px;
+}
+
+
 /* contact us section starts here */
-.contact-us
-{
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0.7, 0), rgba(0, 0.6, 0, 0), rgba(0.7, 0, 0, 0)),
+
+.contact-us {
+    background : linear-gradient(rgba(0.4, 0.4, 0.4, 0.4), rgba(0.4, 0.4, 0.4, 0.6)),
     url(../images/footer_1.jpg);
-    margin: 100px 0px;
+    margin-top : 100px;
     height: 100%;
     background-color: white;
     background-size: cover;
@@ -219,8 +249,7 @@
     position: relative;
 }
 
-.contact-us h1
-{
+.contact-us h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 55px;
     color: white;
@@ -228,60 +257,51 @@
     color: white;
 }
 
-#left
-{
+#left {
     width: 40%;
     height: 100%;
     float: left;
 }
 
-#middle
-{
+#middle {
     width: 20%;
     height: 100%;
     float: left;
 }
 
-#right
-{
+#right {
     width: 40%;
     height: 100%;
     float: left;
 }
 
-.left-side
-{
+.left-side {
     color: white;
     text-align: center;
 }
 
-.middle-side
-{
+.middle-side {
     color: white;
     text-align: center;
 }
 
-.right-side
-{
+.right-side {
     color: white;
     text-align: center;
 }
 
-.contact-us img
-{
+.contact-us img {
     height: 80px;
     margin-top: 100px;
 }
 
-.contact-us h2
-{
+.contact-us h2 {
     margin-top: 10px;
     font-size: 30px;
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.contact-us label
-{
+.contact-us label {
     font-size: 15px;
 }

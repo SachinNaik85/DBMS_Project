@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    padding: 40px 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-color: aliceblue;
+}
+
+.header h1 {
+    font-weight: 400;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 70px;
+    color: black;
+}
+
+.feature-image img {
+    width: 350px;
+    height: 275px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.container p {
+    text-align: center;
+    float: right;
+    float : right;
+}
+
+.a {
+    color: #111111;
+}
+
+.bus-hotel {
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: transparent;
+    color: #111111;
+    margin-left: 2px;
+    float : right;
+}
+
+
+/* this is begining of about section */
+
+.testimonials {
+    padding: 100px 0;
+    /*background-color: rgb(194, 221, 218);*/
+    background-image: url(../images/backgrounds/backg7.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 77%;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.review {
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+    padding-bottom: 50px;
+}
+
+.review p {
+    padding: 50px 10px 10px 10px;
+}
+
+.testimonials img {
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    margin: -30px 0 20px 40%;
+}
+
+.review p::before {
+    content: '\201d';
+    display: block;
+    position: absolute;
+    font-size: 100px;
+    color: rgb(63, 144, 219);
+    left: 44%;
+    top: -20px;
+}

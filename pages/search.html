@@ -1,9 +1,138 @@
+{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Place</title>
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 </head>
-<body bgcolor="cyan" style="text-align : center">
-    <h1 style="padding-top : 100px">this page is not developed yet </h1>
+
+<body>
+    <section class="header">
+        <h1>Coorg</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorg1.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorg2.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorg3.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row ">
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorgh1.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{%static 'images/searchh/coorgh2.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorgh3.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="row ">
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorgb1.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorgb2.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mn-4">
+                    <div class="feature-box">
+                        <div class="feature-image">
+                            <img src="{% static 'images/searchh/coorgb3.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+                <form action="booking_request" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class=Bus-Hotel>Click Me</button>
+                </form>
+            <p>For Bus and Hotel booking</p>
+        </div>
+    </section>
+    <section class=" testimonials ">
+        <h1>User Review</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="review">
+                        <p>Genuinly the best money I've spent! I have had the absolute best trip in Madikeri. And also met some amazing people here.
+                        </p>
+
+                        <h5>Chetana hegde</h5>
+                        <small>Honnavara</small>
+
+                    </div>
+                    <img src="{% static 'images/dest/review/chetu1.jpg' %}">
+                </div>
+                <div class="col-md-4">
+                    <div class="review">
+                        <p> I would highly recommend this trip and anyone thinking about doing it. Manali is an amazing place!
+                        </p>
+                        <h5>Niranjana hegde</h5>
+                        <small>Sagara</small>
+
+                    </div>
+                    <img src="{% static 'images/dest/review/Niranjan.jpg' %}">
+                </div>
+
+                <div class="col-md-4">
+                    <div class="review">
+                        <p>Trip to Goa was absolutly amazing and the beaches really cool. Met some amazing people there.
+                        </p>
+
+                        <h5>R Vishwas</h5>
+                        <small>Bangalore</small>
+
+                    </div>
+                    <img src="{% static 'images/dest/review/vish.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
-</html>
