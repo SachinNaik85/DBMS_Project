@@ -1,0 +1,254 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.header
+{
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0.6, 0), rgba(0, 0.7, 0, 0), rgba(0.9, 0, 0, 0)),
+    url(../images/backgrounds/backgorund_kerala.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.mycontainer        /* this is just a container to give some width from left and right side */
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.header h1      /* this is to print the heading of place */
+{
+    color : white;
+    text-align: center;
+    font-size: 100px;
+}
+
+.bus
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bus label
+{
+    color: white;
+    font-size: 20px;
+}
+
+.bus-fields
+{
+    width: 100%;
+    height: 50px;
+    background : linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5));
+    border-radius: 10px;
+}
+
+.bus-fields h3        /* headings of fields */
+{
+    background: repeating-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0.6, 0), rgba(0, 0.6, 0, 0));
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 50px;
+    margin: 2px 2px;
+    margin-bottom: 10px;
+}
+
+
+#column-1       /* devision for bus id */
+{
+    width: 25%;
+    float: left;
+    text-align: center;
+    color : white;
+}
+
+#column-2       /* devision for departure time */
+{
+    width: 20%;
+    float: left;
+    text-align: center;
+    color : white;
+}
+
+#column-3       /* devision for arrival time */
+{
+    width: 20%;
+    float: left;
+    text-align: center;
+    color : white;
+}
+
+#column-4       /* devision for price */
+{
+    width: 20%;
+    float: left;
+    text-align: center;
+    color : white;
+}
+
+#column-5       /* devision for book now button */
+{
+    width: 15%;
+    float: left;
+    text-align: center;
+    color : white;
+}
+
+/* row 2 things starts here */
+
+#col-1
+{
+    width: 25%;
+    float: left;
+}
+
+#col-2
+{
+    width: 20%;
+    float: left;
+}
+
+#col-3
+{
+    width: 20%;
+    float: left;
+}
+
+#col-4 
+{
+    width: 20%;
+    float: left;
+}
+
+#col-5
+{
+    width: 15%;
+    float: left;
+}
+
+.row2 
+{
+    padding-top: 5px;    
+    padding-bottom: 5px;
+    height: 60px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background : linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.6, 0.6, 0.6, 0.6));
+    border-radius: 10px;
+    margin-top : 5px;
+    margin-bottom : 5px;
+}
+
+.row2 h5
+{
+    margin-top: -5px;
+    font-size: 18px;
+}
+
+.row2 h6
+{
+    margin-top: -3px;
+    font-size: 13px;
+}
+
+.row2 button
+{
+    background: black;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    color: white;
+}
+
+
+/* hotel details starts here */
+
+.hotel
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hotel label
+{
+    color: white;
+    font-size: 20px;
+}
+
+.hotel-fields
+{
+    width: 100%;
+    height: 50px;
+    background : linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5));
+    border-radius: 10px;
+    color: white;
+}
+
+#hotel-column1
+{
+    width: 25%;
+    float: left;
+}
+
+#hotel-column2
+{
+    width: 20%;
+    float: left;
+}
+
+#hotel-column3
+{
+    width: 20%;
+    float: left;
+}
+
+#hotel-column4
+{
+    width: 20%;
+    float: left;
+}
+
+#hotel-column5
+{
+    width: 15%;
+    float: left;
+}
+
+.hotel-fields h3
+{
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 50px;
+    margin: 2px 2px;
+    margin-bottom: 10px;
+}
+
+.hotel-field-values
+{
+    padding-top: 5px;    
+    padding-bottom: 5px;
+    height: 60px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background : linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.7, 0.7, 0.7, 0.7));
+    border-radius: 10px;
+    margin-top : 5px;
+    margin-bottom : 5px;
+}
+
+.hotel-field-values button
+{
+    background: black;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    color: white;
+}

@@ -1,0 +1,119 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="{% static 'css/booking_page.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <section class="header">
+        <h1>{{place}}</h1>
+        <div class="mycontainer">
+            <div class="bus">
+                <label> Choose your bus here </label>
+                <div class="bus-fields">
+                    <div id="column-1">
+                        <h3> Bus ID </h3>
+                    </div>          <!-- end of column-1 -->
+
+                    <div id="column-2">
+                        <h3>Departure Time </h3>
+                    </div>          <!-- end of column-1 -->
+
+                    <div  id="column-3">
+                        <h3>Arrival Time</h3>
+                    </div>          <!-- end of column-1 -->
+
+                    <div id="column-4">
+                        <h3> Price </h3>
+                    </div>          <!-- end of column-1 -->
+
+                    <div id="column-5">
+                        <h3> book now </h3>
+                    </div>
+                </div>                      <!-- end of row 1 -->
+
+                {% for bus in buses %}
+                    <div class="row2">
+                        <div class="bus-ID-value" id="col-1">
+                            <h5>{{bus.busID}}</h5>
+                            <h6>{{bus.busDesc}}</h6>
+                        </div>          <!-- end of column-1 -->
+    
+                        <div class="departure-time-value" id="col-2">
+                            <h5>{{bus.departure_time}}</h5>
+                        </div>          <!-- end of column-2 -->
+    
+                        <div class="arrival-time-value" id="col-3">
+                            <h5>{{bus.arrival_time}}</h5>
+                        </div>          <!-- end of column-3 -->
+    
+                        <div class="price-value" id="col-4">
+                            <h5> {{bus.price}} </h5>
+                        </div>          <!-- end of column-4 -->
+    
+                        <div class="book-now-button" id="col-5">
+                            <button> Book Now </button>
+                        </div>
+                    </div>                      <!-- end of row 2 -->
+                {% endfor %}
+            </div>          <!-- end of bus -->
+
+
+
+            <div class="hotel">
+                <label>Choose your hotel here</label>
+                <div class="hotel-fields">
+                    <div id="hotel-column1">
+                        <h3> Hotel Name </h3>
+                    </div>
+                    
+                    <div id="hotel-column2">
+                        <h3> Hotel Type </h3>
+                    </div>
+
+                    <div id="hotel-column3">
+                        <h3> Price </h3>
+                    </div>
+
+                    <div id="hotel-column4">
+                        <h3> Hotel Location </h3>
+                    </div>
+
+                    <div id="hotel-column5">
+                        <h3>Book Now </h3>
+                    </div>
+                </div>      <!--end of hotel fields-->
+
+                {% for hotel in hotels %}
+                <div class="hotel-field-values">
+                    <div id="hotel-column1">
+                        <h5> {{hotel.name}} </h5>
+                    </div>
+                    
+                    <div id="hotel-column2">
+                        <h5> {{hotel.type}} </h5>
+                    </div>
+
+                    <div id="hotel-column3">
+                        <h5> {{hotel.price}} </h5>
+                    </div>
+
+                    <div id="hotel-column4">
+                        <h5> {{hotel.location}} </h5>
+                    </div>
+
+                    <div id="hotel-column5">
+                        <button type="submit"> Book Now </button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>      <!-- end of hotel -->
+
+
+        </div>      <!-- end of my container -->
+    </section>
+</body>
+</html>

@@ -15,7 +15,6 @@
     <section class="header">
         <div class="container">
             <img src="{% static 'images/logo.png' %}" class="logo">
-            <img src="{% static 'images/tree.png' %}" class="tree">
             <form action="signup">
                 {% csrf_token %}
                 <button type="submit" class="signup-btn">Sign up</button>
@@ -25,16 +24,16 @@
                 <button type="submit" class="login-btn">Log in</button>
             </form>
         </div>
-        <h2>Let us take you away.........</h2>
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="search state or city">
-            <div class="input-group-append">
-                <form action="searchplace" method="post">
-                    {% csrf_token %}
-                    <button type="submit" class="input-group-type-btn">search</button>
-                </form>
+
+        <h2>Put the roaming mode on..!</h2>
+        <form action="searchplace" method="post">
+            {% csrf_token %}
+            <div class="inputs">
+                 <input type="text" placeholder="enter city you want to visit" name="search_place">
+                 <button type="submit">Search</button>
             </div>
-        </div>
+        </form>
+        <img src="{% static 'images/tree.png' %}" class="tree">
     </section>
 
     <!--this is starting of features section-->

@@ -12,7 +12,7 @@
 
 <body>
     <section class="header">
-        <h1>Coorg</h1>
+        <h1>{{place}}</h1>
         <div class="container">
             <div class="row">
                 <div class="col-mn-4">
@@ -87,10 +87,12 @@
                 </div>
             </div>
             <br>
-                <form action="booking_request" method="post">
+
+                <form action="searchplace/booking_request" method="post">
                     {% csrf_token %}
                     <button type="submit" class=Bus-Hotel>Click Me</button>
                 </form>
+
             <p>For Bus and Hotel booking</p>
         </div>
     </section>
@@ -100,7 +102,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="review">
-                        <p>Genuinly the best money I've spent! I have had the absolute best trip in Madikeri. And also met some amazing people here.
+                        <p>Genuinly the best money I've spent!
+                            I have had the absolute best trip in Madikeri.
+                            And also met some amazing people here.
                         </p>
 
                         <h5>Chetana hegde</h5>
@@ -111,7 +115,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="review">
-                        <p> I would highly recommend this trip and anyone thinking about doing it. Manali is an amazing place!
+                        <p> I would highly recommend this trip and anyone thinking about doing it.
+                            Manali is an amazing place!
                         </p>
                         <h5>Niranjana hegde</h5>
                         <small>Sagara</small>
@@ -122,7 +127,8 @@
 
                 <div class="col-md-4">
                     <div class="review">
-                        <p>Trip to Goa was absolutly amazing and the beaches really cool. Met some amazing people there.
+                        <p>Trip to Goa was absolutly amazing and the beaches really cool.
+                            Met some amazing people there.
                         </p>
 
                         <h5>R Vishwas</h5>
