@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dbms.iml" filepath="$PROJECT_DIR$/.idea/dbms.iml" />
+      <module fileurl="file://$USER_HOME$/projects/telusko/.idea/telusko.iml" filepath="$USER_HOME$/projects/telusko/.idea/telusko.iml" />
     </modules>
   </component>
 </project>

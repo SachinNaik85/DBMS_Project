@@ -7,11 +7,11 @@
 .header
 {
     background: linear-gradient(rgba(0.4, 0.4, 0.4, 0.4), rgba(0.4, 0.4, 0.4, 0.4)),
-    url(../images/backgrounds/backg4.jpg);
+    url(../images/backgrounds/backg2.jpg);
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100%;
+    height : 100%;
     text-align: center;
 }
 
