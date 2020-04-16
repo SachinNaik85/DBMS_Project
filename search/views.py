@@ -63,11 +63,26 @@ def create_hotels():
 
 def home(request):
     global place_name
-    place_name = request.POST['search_place']       # fetching the place name which was searched
+    try:
+        place_name = request.POST['search_place']       # fetching the place name which was searched
+    except Exception as e:
+        pass
+    return render(request, 'search.html', {'place' : place_name})
+
+
+def features_home(request,  place_from_features):
+    global place_name
+    try:
+        place_name = place_from_features
+    except Exception as e:
+        pass
+
     return render(request, 'search.html', {'place' : place_name})
 
 
 def booking_request(request):
+    global place_name
     buses = create_bus()
     hotels = create_hotels()
     return render(request, 'booking_page.html', {'place' : place_name, 'buses' : buses, 'hotels' : hotels})
+

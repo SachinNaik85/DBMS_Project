@@ -14,17 +14,17 @@
             <img src="{% static 'images/user/user2.png' %}">
             <form action="signed_up" method="post">
                 {% csrf_token %}
-                <input type="text" placeholder="Name">
+                <input autocomplete="off" type="text" placeholder="Name">
                 <br>
-                <input type="text" placeholder="User Name">
+                <input autocomplete="off" type="text" placeholder="User Name">
                 <br>
-                <input type="email" placeholder="Email Id">
+                <input autocomplete="off" type="email" placeholder="Email Id">
                 <br>
-                <input type="text" placeholder="Phone Number">
+                <input autocomplete="off" type="text" placeholder="Phone Number">
                 <br>
-                <input type="password" placeholder="Password">
+                <input autocomplete="off" type="password" placeholder="Password">
                 <br>
-                <input type="password" placeholder="Confirm Password">
+                <input autocomplete="off" type="password" placeholder="Confirm Password">
                 <br>
                 <button type="submit">Sign in</button>
             </form>
