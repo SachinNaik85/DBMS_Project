@@ -64,9 +64,8 @@
     border : 2px solid white;
     border-radius : 20px;
     background : transparent;
-    width : 450px;
+    width : 250px;
     height : 40px;
-    position : relative;
 }
 
 .inputs button
@@ -77,8 +76,7 @@
     width : 70px;
     height : 37px;
     color : white;
-    position : relative;
-    left : -76px;
+    margin-top: 10px;
 }
 
 /* this h2 for is printing let us take you away */
