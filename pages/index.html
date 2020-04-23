@@ -29,9 +29,10 @@
         <form action="searchplace" method="POST">
             {% csrf_token %}
             <div class="inputs">
-                <input autocomplete="off" type="text" placeholder="form" name="boarding_place">
-                 <input autocomplete="off" type="text" placeholder="enter city you want to visit" name="search_place">
-                 <br><button type="submit">Search</button>
+                <input autocomplete="off" type="text" placeholder="From" name="boarding_place">
+                <input autocomplete="off" type="text" placeholder="city or place you want to visit" name="search_place">
+                <br>
+                <button type="submit">Search</button>
             </div>
         </form>
         <img src="{% static 'images/tree.png' %}" class="tree">

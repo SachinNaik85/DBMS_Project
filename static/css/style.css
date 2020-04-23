@@ -76,9 +76,13 @@
     width : 70px;
     height : 37px;
     color : white;
-    margin-top: 10px;
+    margin-top : 10px
 }
 
+.inputs button:hover
+{
+    cursor : default;
+}
 /* this h2 for is printing let us take you away */
 
 .header h2 {
