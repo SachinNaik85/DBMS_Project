@@ -15,6 +15,14 @@ def create_bus():
     bus1.price = '1200 INR'
     buses.append(bus1)
 
+    bus3 = Bus()
+    bus3.busID = 'SriDurgamba'
+    bus3.busDesc = ' NON AC Seater/Sleeper (2+1)'
+    bus3.departure_time = '20:30 PM'
+    bus3.arrival_time = '06:00 AM'
+    bus3.price = '900 INR'
+    buses.append(bus3)
+
     bus2 = Bus()
     bus2.busID = 'SRS 6682'
     bus2.busDesc = ' NON AC Sleeper (2+1)'
@@ -23,13 +31,6 @@ def create_bus():
     bus2.price = '1000 INR'
     buses.append(bus2)
 
-    bus3 = Bus()
-    bus3.busID = 'SriDurgamba'
-    bus3.busDesc = ' NON AC Seater/Sleeper (2+1)'
-    bus3.departure_time = '20:30 PM'
-    bus3.arrival_time = '06:00 AM'
-    bus3.price = '900 INR'
-    buses.append(bus3)
 
     return buses
 

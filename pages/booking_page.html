@@ -6,10 +6,11 @@
     <title>Search Page</title>
     <link rel="stylesheet" href="{% static 'css/booking_page.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="{% static 'js/booking_page.js' %}"></script>
 </head>
 <body>
     <section class="header">
-        <h1>{{place}}</h1>
+        <h1 >{{place}}</h1>
         <div class="mycontainer">
             <div class="bus">
                 <label> Choose your bus here </label>
@@ -33,7 +34,7 @@
                     <div id="column-5">
                         <h3> book now </h3>
                     </div>
-                </div>                      <!-- end of row 1 -->
+                </div>                      <!-- end of bus fields -->
 
                 {% for bus in buses %}
                     <div class="row2">
@@ -55,12 +56,39 @@
                         </div>          <!-- end of column-4 -->
     
                         <div class="book-now-button" id="col-5">
-                            <button> Book Now </button>
+                            <button onclick="open_modal()"> Book Now </button>
+                            <section class="book-bus">
+                                <span onclick=" close_modal()">&#10006;</span>
+                                <h4> Enter your details below </h4>
+                                <div class="my-container">
+                                    <form action="{{bus.busID}}">
+                                        <div id="left">
+                                            <label>Departure date</label>
+                                            <input type="date" autocomplete="off"> <br><br>
+                                            <label>Username</label>
+                                            <input type="text" autocomplete="off">
+                                        </div>
+
+                                        <div id="right">
+                                            <label>Number of seats</label><br>
+                                            <select autocomplete="off">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <br>
+                                            </select><br><br>
+                                            <label> password</label>
+                                            <input type="password" autocomplete="off">
+                                        </div>
+                                        <button type="submit">Confirm booking</button>
+                                    </form>
+                                </div>
+                            </section>
                         </div>
                     </div>                      <!-- end of row 2 -->
                 {% endfor %}
             </div>          <!-- end of bus -->
-
 
 
             <div class="hotel">
@@ -87,7 +115,7 @@
                     </div>
                 </div>      <!--end of hotel fields-->
 
-                {% for hotel in hotels %}
+            {% for hotel in hotels %}
                 <div class="hotel-field-values">
                     <div id="hotel-column1">
                         <h5> {{hotel.name}} </h5>
@@ -109,9 +137,8 @@
                         <button type="submit"> Book Now </button>
                     </div>
                 </div>
-                {% endfor %}
+            {% endfor %}
             </div>      <!-- end of hotel -->
-
 
         </div>      <!-- end of my container -->
     </section>
