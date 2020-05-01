@@ -7,10 +7,12 @@
 .header
 {
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0.6, 0), rgba(0, 0.7, 0, 0), rgba(0.9, 0, 0, 0)),
+    width : 100%;
+    background: linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.5, 0.5, 0.5, 0.5)),
     url(../images/backgrounds/backgorund_kerala.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -251,4 +253,107 @@
     height: 30px;
     width: 100px;
     color: white;
+}
+
+/* this is for opening a popup window when i click book now button */
+.book-bus
+{
+    visibility: hidden;
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    background: linear-gradient(rgba(183, 211, 160, 1), rgb(117, 170, 219), rgb(201, 111, 178));
+    position: absolute;
+    text-align: center;
+    left: calc(50% - 200px);
+    top: calc(50% - 200px);
+    border-radius: 20px;
+    color: black;
+}
+
+
+.book-bus span      /* this is to print the X mark on modal popup */
+{
+    font-size: 20px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.book-bus span:hover
+{
+    cursor: pointer;
+}
+
+.my-container
+{
+    margin: 20px 20px;
+}
+
+.book-bus h4
+{
+    margin-top: 45px;
+    
+}
+
+#left
+{
+    float: left;
+    height: 50%;
+    width: 50%;
+    color: black;
+}
+
+#right
+{
+    float: left;
+    height: 50%;
+    width: 50%;
+    color: black;
+}
+
+.my-container label
+{
+    color: black;
+    font-size: 15px;
+}
+
+.my-container input, select, option
+{
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: transparent;
+    text-align: center;
+}
+
+.my-container input
+{
+    width: 150px;
+    height: 30px;
+    color: black;
+}
+
+.my-container select
+{
+    width: 40px;
+    height: 30px;
+    color: black;
+}
+
+.my-container button
+{
+    background: linear-gradient(black, brown);
+    width: 140px;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.my-container button:hover
+{
+    width: 142px;
+    height: 36px;
 }

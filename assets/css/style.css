@@ -64,9 +64,8 @@
     border : 2px solid white;
     border-radius : 20px;
     background : transparent;
-    width : 450px;
+    width : 250px;
     height : 40px;
-    position : relative;
 }
 
 .inputs button
@@ -77,10 +76,13 @@
     width : 70px;
     height : 37px;
     color : white;
-    position : relative;
-    left : -76px;
+    margin-top : 10px
 }
 
+.inputs button:hover
+{
+    cursor : default;
+}
 /* this h2 for is printing let us take you away */
 
 .header h2 {
@@ -113,9 +115,10 @@
     padding: 20px 0px;
 }
 
+
 .feature-image img {
-    width: 350px;
-    height: 250px;
+    width: 348px;
+    height: 248px;
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -131,6 +134,26 @@
     color: black;
     font-size: 25px;
     font-family: serif;
+}
+
+.feature-image button
+{
+    border: none;
+    background: transparent;
+    color: black;
+}
+
+.feature-image label:hover
+{
+    cursor: default;
+    font-size: 26px;
+}
+
+.feature-image img:hover
+{
+    width: 350px;
+    height: 250px;
+    transition-duration: 0.2s;
 }
 
 .price p
