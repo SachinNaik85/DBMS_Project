@@ -1,5 +1,6 @@
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,87 +9,99 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="{% static 'js/booking_page.js' %}"></script>
 </head>
+
 <body>
     <section class="header">
-        <h1 >{{place}}</h1>
+        <h1>{{place}}</h1>
         <div class="mycontainer">
             <div class="bus">
                 <label> Choose your bus here </label>
                 <div class="bus-fields">
                     <div id="column-1">
                         <h3> Bus ID </h3>
-                    </div>          <!-- end of column-1 -->
+                    </div>
+                    <!-- end of column-1 -->
 
                     <div id="column-2">
                         <h3>Departure Time </h3>
-                    </div>          <!-- end of column-1 -->
+                    </div>
+                    <!-- end of column-1 -->
 
-                    <div  id="column-3">
+                    <div id="column-3">
                         <h3>Arrival Time</h3>
-                    </div>          <!-- end of column-1 -->
+                    </div>
+                    <!-- end of column-1 -->
 
                     <div id="column-4">
                         <h3> Price </h3>
-                    </div>          <!-- end of column-1 -->
+                    </div>
+                    <!-- end of column-1 -->
 
                     <div id="column-5">
                         <h3> book now </h3>
                     </div>
-                </div>                      <!-- end of bus fields -->
+                </div>
+                <!-- end of bus fields -->
 
                 {% for bus in buses %}
-                    <div class="row2">
-                        <div class="bus-ID-value" id="col-1">
-                            <h5>{{bus.busID}}</h5>
-                            <h6>{{bus.busDesc}}</h6>
-                        </div>          <!-- end of column-1 -->
-    
-                        <div class="departure-time-value" id="col-2">
-                            <h5>{{bus.departure_time}}</h5>
-                        </div>          <!-- end of column-2 -->
-    
-                        <div class="arrival-time-value" id="col-3">
-                            <h5>{{bus.arrival_time}}</h5>
-                        </div>          <!-- end of column-3 -->
-    
-                        <div class="price-value" id="col-4">
-                            <h5> {{bus.price}} </h5>
-                        </div>          <!-- end of column-4 -->
-    
-                        <div class="book-now-button" id="col-5">
-                            <button onclick="open_modal()"> Book Now </button>
-                            <section class="book-bus">
-                                <span onclick=" close_modal()">&#10006;</span>
-                                <h4> Enter your details below </h4>
-                                <div class="my-container">
-                                    <form action="{{bus.busID}}">
-                                        <div id="left">
-                                            <label>Departure date</label>
-                                            <input type="date" autocomplete="off"> <br><br>
-                                            <label>Username</label>
-                                            <input type="text" autocomplete="off">
-                                        </div>
+                <div class="row2">
+                    <div class="bus-ID-value" id="col-1">
+                        <h5>{{bus.busID}}</h5>
+                        <h6>{{bus.busDesc}}</h6>
+                    </div>
+                    <!-- end of column-1 -->
 
-                                        <div id="right">
-                                            <label>Number of seats</label><br>
-                                            <select autocomplete="off">
+                    <div class="departure-time-value" id="col-2">
+                        <h5>{{bus.departure_time}}</h5>
+                    </div>
+                    <!-- end of column-2 -->
+
+                    <div class="arrival-time-value" id="col-3">
+                        <h5>{{bus.arrival_time}}</h5>
+                    </div>
+                    <!-- end of column-3 -->
+
+                    <div class="price-value" id="col-4">
+                        <h5> {{bus.price}} </h5>
+                    </div>
+                    <!-- end of column-4 -->
+
+                    <div class="book-now-button" id="col-5">
+                        <button onclick="open_modal()"> Book Now </button>
+                        <section class="book-bus">
+                            <span onclick=" close_modal()">&#10006;</span>
+                            <h4> Enter your details below </h4>
+                            <div class="my-container">
+                                <form action="{{bus.busID}}">
+                                    <div id="left">
+                                        <label>Departure date</label>
+                                        <input type="date" autocomplete="off"> <br><br>
+                                        <label>Username</label>
+                                        <input type="text" autocomplete="off">
+                                    </div>
+
+                                    <div id="right">
+                                        <label>Number of seats</label><br>
+                                        <select autocomplete="off">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>
                                                 <br>
                                             </select><br><br>
-                                            <label> password</label>
-                                            <input type="password" autocomplete="off">
-                                        </div>
-                                        <button type="submit">Confirm booking</button>
-                                    </form>
-                                </div>
-                            </section>
-                        </div>
-                    </div>                      <!-- end of row 2 -->
+                                        <label> password</label>
+                                        <input type="password" autocomplete="off">
+                                    </div>
+                                    <button type="submit">Confirm booking</button>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- end of row 2 -->
                 {% endfor %}
-            </div>          <!-- end of bus -->
+            </div>
+            <!-- end of bus -->
 
 
             <div class="hotel">
@@ -97,7 +110,7 @@
                     <div id="hotel-column1">
                         <h3> Hotel Name </h3>
                     </div>
-                    
+
                     <div id="hotel-column2">
                         <h3> Hotel Type </h3>
                     </div>
@@ -113,14 +126,15 @@
                     <div id="hotel-column5">
                         <h3>Book Now </h3>
                     </div>
-                </div>      <!--end of hotel fields-->
+                </div>
+                <!--end of hotel fields-->
 
-            {% for hotel in hotels %}
+                {% for hotel in hotels %}
                 <div class="hotel-field-values">
                     <div id="hotel-column1">
                         <h5> {{hotel.name}} </h5>
                     </div>
-                    
+
                     <div id="hotel-column2">
                         <h5> {{hotel.type}} </h5>
                     </div>
@@ -133,14 +147,59 @@
                         <h5> {{hotel.location}} </h5>
                     </div>
 
-                    <div id="hotel-column5">
-                        <button type="submit"> Book Now </button>
+                    <div class="book-now-button" id="hotel-column5">
+                        <button onclick="open_model()"> Book Now </button>
+                        <section class="book-hotel">
+                            <span onclick=" close_model()">&#10006;</span>
+                            <h4> Enter your details below </h4>
+                            <div class="my-containerr">
+                                <form action="{{hotel.name}}">
+                                    <div id="left">
+                                        <label>Check in date</label>
+                                        <input type="date" autocomplete="off"> <br><br>
+                                        <label>Number of guests</label><br>
+                                        <select autocomplete="off">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <br>
+                                            </select><br><br>
+                                        <label>Username</label>
+                                        <input type="text" autocomplete="off">
+                                    </div>
+
+                                    <div id="right">
+                                        <label>Check out date</label>
+                                        <input type="date" autocomplete="off"> <br><br>
+                                        <label>Number of rooms</label><br>
+                                        <select autocomplete="off">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <br>
+                                            </select><br><br>
+                                        <label> password</label>
+                                        <input type="password" autocomplete="off">
+                                    </div>
+                                    <button type="submit">Confirm booking</button>
+                                </form>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            {% endfor %}
-            </div>      <!-- end of hotel -->
+                {% endfor %}
+            </div>
+            <!-- end of hotel -->
 
-        </div>      <!-- end of my container -->
+        </div>
+        <!-- end of my container -->
     </section>
 </body>
+
 </html>
