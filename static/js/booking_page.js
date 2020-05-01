@@ -13,7 +13,7 @@ function close_modal() {
     }
 }
 
-function open_model() {
+function hotel_open_model() {
     console.log('modal called');
     var modalpopup = document.getElementsByClassName('book-hotel');
     for (var i = 0; i < modalpopup.length; i++) {
@@ -21,7 +21,7 @@ function open_model() {
     }
 }
 
-function close_model() {
+function hotel_close_model() {
     var modalpopup = document.getElementsByClassName('book-hotel');
     for (var i = 0; i < modalpopup.length; i++) {
         modalpopup[i].style = "visibility: hidden ; filter : blur(0px)";

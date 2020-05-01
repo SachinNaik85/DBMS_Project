@@ -74,3 +74,14 @@
 {
     cursor: pointer;
 }
+
+.signin label
+{
+    position: absolute;
+    top: 420px;
+    left: calc(50% - 130px);
+    color: red;
+    font-family: monospace;
+    font-size: 15px;
+    visibility: hidden;
+}
