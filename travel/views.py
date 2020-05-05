@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import mysql.connector
-db = mysql.connector.connect(user='root', passwd='An@lien@85', database='travel', host='localhost')
+from essential import credential
+db = mysql.connector.connect(user='root', passwd=credential, database='travel', host='localhost')
 sql = db.cursor()
 
 
@@ -31,8 +32,8 @@ def login(request):
 
 
 def signup(request):
-    return render(request, 'signin.html')
+    if request.method == 'GET':
+        return render(request, 'signin.html')
 
-
-def signed_up(request):
-    return render(request, 'index.html')
+    elif request.method == 'POST':
+        return render(request, 'index.html')

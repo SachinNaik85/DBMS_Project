@@ -13,7 +13,7 @@
     <section class="header">
         <div class="signin">
             <img src="{% static 'images/user/user2.png' %}">
-            <form  onsubmit="return validate()" action="signed_up" method="post">
+            <form  onsubmit="return validate()" action="signup" method="post">
                 {% csrf_token %}
                 <input autocomplete="off" type="text" placeholder="Name" id="name">
                 <br>
