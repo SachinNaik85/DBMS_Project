@@ -13,7 +13,7 @@ function validate()
     var email_regx = /^[a-zA-Z0-9.-]+@[a-zA-Z0-9]+.[a-z]+(.[a-z]+)?$/
     var phone_regx = /^[1-9][0-9]{9}$/
     var username_regx = /^[a-zA-Z0-9_$.@]+$/
-    var password_regx = /^(?=.*\d).{4,8}$/
+    var password_regx = /^(?=.*\d).{4,12}$/
  
     if (!(name_regx.test(name)))
     {

@@ -6,7 +6,7 @@
 
 .header
 {
-    background: linear-gradient(rgba(0.4, 0.4, 0.4, 0.4), rgba(0.4, 0.4, 0.4, 0.4)),
+    background: linear-gradient(rgba(0.4, 0.4, 0.4, 0.6), rgba(0.4, 0.4, 0.4, 0.6)),
     url(../images/backgrounds/backg2.jpg);
     background-size:cover;
     background-position: center;
@@ -75,4 +75,11 @@
 {
     color: red;
     font-family: monospace;
+}
+
+.inputs span
+{
+    color : #fff;
+    font-size : 14px;
+    underline : none;
 }
