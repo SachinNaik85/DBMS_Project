@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBMS Project</title>
+    <script src="{% static 'js/signin.js' %} "></script>
     <link rel="stylesheet" href="{% static 'css/signin.css' %} ">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
    
@@ -12,22 +13,28 @@
     <section class="header">
         <div class="signin">
             <img src="{% static 'images/user/user2.png' %}">
-            <form action="signed_up" method="post">
-                {% csrf_token %}
-                <input autocomplete="off" type="text" placeholder="Name">
-                <br>
-                <input autocomplete="off" type="text" placeholder="User Name">
-                <br>
-                <input autocomplete="off" type="email" placeholder="Email Id">
-                <br>
-                <input autocomplete="off" type="text" placeholder="Phone Number">
-                <br>
-                <input autocomplete="off" type="password" placeholder="Password">
-                <br>
-                <input autocomplete="off" type="password" placeholder="Confirm Password">
-                <br>
-                <button type="submit">Sign in</button>
-            </form>
+            <div class="container">
+                <form  onsubmit="return validate()" action="signup" method="post">
+                    {% csrf_token %}
+                    <input autocomplete="off" type="text" placeholder="Name" id="name" name="name">
+                    <br>
+                    <input autocomplete="off" type="text" placeholder="User Name" id="username" name="username">
+                    <br>
+                    <input autocomplete="off" type="email" placeholder="Email Id" id="email" name="email">
+                    <br>
+                    <input autocomplete="off" type="text" placeholder="Phone Number" id="phone" name="phone">
+                    <br>
+                    <input autocomplete="off" type="password" placeholder="Password" id="password" name="password">
+                    <br>
+                    <input autocomplete="off" type="password" placeholder="Confirm Password" id="con_password" name="confirm_password">
+                    <br>
+                    <label id="label"> {{error_message}} </label>
+                    <br>
+                    <span>Already have an account? <a href="login"> Login here </a></span>
+                    <br>
+                    <button type="submit">Sign in</button>
+                </form>
+            </div>
         </div>
     </section>
 </body>

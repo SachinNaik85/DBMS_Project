@@ -8,7 +8,6 @@
     <title>DBMS Project</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
 </head>
 
 <body>
@@ -17,13 +16,39 @@
             <img src="{% static 'images/logo.png' %}" class="logo">
             <form action="signup">
                 {% csrf_token %}
-                <button type="submit" class="signup-btn">Sign up</button>
+                <button id="signup" type="submit" class="signup-btn">Sign up</button>
             </form>
-            <form action="login" method="post">
+            <form action="login">
                 {% csrf_token %}
-                <button type="submit" class="login-btn">Log in</button>
+                <button id="login" type="submit" class="login-btn">Log in</button>
             </form>
+
+         <img id="userimage" class="user" src="{% static 'images/user/user4.png' %}">
+         <div class="mybox">
+            <label id="username">{{username}}</label>
+         </div>
+         
         </div>
+
+        {% if authenticate == True %}
+        <script type="text/javascript">
+        (
+            function()
+            {
+                document.getElementById('login').style = "visibility : hidden";
+                document.getElementById('signup').style = "visibility : hidden";
+                document.getElementById('userimage').style = "visibility : visible";
+                document.getElementById('username').style = "visibility : visible";
+                var mybox = document.getElementsByClassName('mybox');
+                for (var i =0 ; i<mybox.length; i++)
+                {
+                    mybox[i].style = "visibility : visible";
+                }
+            }
+        )
+        ();
+        </script>
+        {% endif %}
 
         <h2>Put the roaming mode on..!</h2>
         <form action="searchplace" method="POST">
