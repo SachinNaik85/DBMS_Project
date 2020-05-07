@@ -26,10 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/signin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/signin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,6 +110,14 @@
       <option name="presentableId" value="Default" />
       <updated>1585962724885</updated>
     </task>
+    <task id="LOCAL-00001" summary="signup and login functions added">
+      <created>1588837519770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588837519770</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -142,6 +148,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="signup and login functions added" />
+    <option name="LAST_COMMIT_MESSAGE" value="signup and login functions added" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1586863553949">
       <screen x="0" y="0" width="1366" height="728" />
@@ -155,10 +165,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1588828153151" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1588773460293">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1588837517942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588773460293" />
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588837517942" />
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1588838429885">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1588838429885" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1586865798934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -187,6 +201,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587190472697" />
+    <state x="530" y="278" key="VCS.ChangelistChooser" timestamp="1588838167208">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1588838167208" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1588837601987">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588837601987" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586042410277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
