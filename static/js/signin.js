@@ -9,7 +9,7 @@ function validate()
     var password = document.getElementById('password').value;
     var confirm_password = document.getElementById('con_password').value;
     
-    var name_regx = /^[a-zA-Z]+$/
+    var name_regx = /^[a-zA-Z' ']+$/
     var email_regx = /^[a-zA-Z0-9.-]+@[a-zA-Z0-9]+.[a-z]+(.[a-z]+)?$/
     var phone_regx = /^[1-9][0-9]{9}$/
     var username_regx = /^[a-zA-Z0-9_$.@]+$/

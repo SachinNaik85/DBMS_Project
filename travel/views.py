@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 import mysql.connector
+import mysql.connector.errorcode
+from django.shortcuts import render
 from essential import credential
+
 db = mysql.connector.connect(user='root', passwd=credential, database='travel', host='localhost')
 sql = db.cursor()
 
@@ -37,11 +38,28 @@ def signup(request):
 
     elif request.method == 'POST':
         new_username = request.POST['username']
-        query = f'select exists(select * from user where username = "{new_username}")'
-        sql.execute(query)
-        valid_username = sql.fetchall()
-        if valid_username[0][0] == 0:
+        try:
+            query = f'select exists(select * from user where username = "{new_username}")'
+            sql.execute(query)
+            not_valid_username = sql.fetchall()
+        except mysql.connector.Error as e:
+            print(e)
+
+        if not not_valid_username[0][0]:
+            name = request.POST['name']
+            username = request.POST['username']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            password = request.POST['username']
+            try:
+                query = f'insert into user values ("{username}", "{name}", "{email}", {phone}, MD5("{password}"));'
+                sql.execute(query)
+                db.commit()
+                print(f'total rows{sql.rowcount}')
+            except mysql.connector.Error as e:
+                print(e)
             return render(request, 'index.html')
-        elif valid_username[0][0] == 1:
+
+        elif not_valid_username[0][0]:
             message = 'Username already taken'
             return render(request, 'signin.html', {'error_message' : message})

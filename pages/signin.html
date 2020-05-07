@@ -16,17 +16,17 @@
             <div class="container">
                 <form  onsubmit="return validate()" action="signup" method="post">
                     {% csrf_token %}
-                    <input autocomplete="off" type="text" placeholder="Name" id="name" name="name">
+                    <input  type="text" placeholder="Name" id="name" name="name">
                     <br>
                     <input autocomplete="off" type="text" placeholder="User Name" id="username" name="username">
                     <br>
-                    <input autocomplete="off" type="email" placeholder="Email Id" id="email" name="email">
+                    <input  type="email" placeholder="Email Id" id="email" name="email">
                     <br>
-                    <input autocomplete="off" type="text" placeholder="Phone Number" id="phone" name="phone">
+                    <input  type="text" placeholder="Phone Number" id="phone" name="phone">
                     <br>
-                    <input autocomplete="off" type="password" placeholder="Password" id="password" name="password">
+                    <input  type="password" placeholder="Password" id="password" name="password">
                     <br>
-                    <input autocomplete="off" type="password" placeholder="Confirm Password" id="con_password" name="confirm_password">
+                    <input  type="password" placeholder="Confirm Password" id="con_password" name="confirm_password">
                     <br>
                     <label id="label"> {{error_message}} </label>
                     <br>
