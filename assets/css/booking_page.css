@@ -1,11 +1,9 @@
-*
-{
+* {
     padding: 0px;
     margin: 0px;
 }
 
-.header
-{
+.header {
     height: 100%;
     width : 100%;
     background: linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.5, 0.5, 0.5, 0.5)),
@@ -15,41 +13,43 @@
     background-attachment: fixed;
 }
 
+.mycontainer
+/* this is just a container to give some width from left and right side */
 
-.mycontainer        /* this is just a container to give some width from left and right side */
 {
     margin-left: 30px;
     margin-right: 30px;
 }
 
-.header h1      /* this is to print the heading of place */
+.header h1
+/* this is to print the heading of place */
+
 {
-    color : white;
+    color: white;
     text-align: center;
     font-size: 100px;
 }
 
-.bus
-{
+.bus {
     margin-top: 20px;
     text-align: center;
 }
 
-.bus label
-{
+.bus label {
     color: white;
     font-size: 20px;
 }
 
-.bus-fields
-{
+.bus-fields {
     width: 100%;
     height: 50px;
-    background : linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5));
+    background: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5));
     border-radius: 10px;
 }
 
-.bus-fields h3        /* headings of fields */
+.bus-fields h3
+/* headings of fields */
+
 {
     background: repeating-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0.6, 0), rgba(0, 0.6, 0, 0));
     border: 2px solid white;
@@ -59,107 +59,108 @@
     margin-bottom: 10px;
 }
 
+#column-1
+/* devision for bus id */
 
-#column-1       /* devision for bus id */
 {
     width: 25%;
     float: left;
     text-align: center;
-    color : white;
+    color: white;
 }
 
-#column-2       /* devision for departure time */
+#column-2
+/* devision for departure time */
+
 {
     width: 20%;
     float: left;
     text-align: center;
-    color : white;
+    color: white;
 }
 
-#column-3       /* devision for arrival time */
+#column-3
+/* devision for arrival time */
+
 {
     width: 20%;
     float: left;
     text-align: center;
-    color : white;
+    color: white;
 }
 
-#column-4       /* devision for price */
+#column-4
+/* devision for price */
+
 {
     width: 20%;
     float: left;
     text-align: center;
-    color : white;
+    color: white;
 }
 
-#column-5       /* devision for book now button */
+#column-5
+/* devision for book now button */
+
 {
     width: 15%;
     float: left;
     text-align: center;
-    color : white;
+    color: white;
 }
+
 
 /* row 2 things starts here */
 
-#col-1
-{
+#col-1 {
     width: 25%;
     float: left;
 }
 
-#col-2
-{
+#col-2 {
     width: 20%;
     float: left;
 }
 
-#col-3
-{
+#col-3 {
     width: 20%;
     float: left;
 }
 
-#col-4 
-{
+#col-4 {
     width: 20%;
     float: left;
 }
 
-#col-5
-{
+#col-5 {
     width: 15%;
     float: left;
 }
 
-.row2 
-{
-    padding-top: 5px;    
+.row2 {
+    padding-top: 5px;
     padding-bottom: 5px;
     height: 60px;
     width: 100%;
     color: white;
     text-align: center;
-    background : linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.6, 0.6, 0.6, 0.6));
+    background: linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.6, 0.6, 0.6, 0.6));
     border-radius: 10px;
-    margin-top : 5px;
-    margin-bottom : 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.row2 h5
-{
+.row2 h5 {
     margin-top: -5px;
     font-size: 18px;
 }
 
-.row2 h6
-{
+.row2 h6 {
     margin-top: -3px;
     font-size: 13px;
 }
 
-.row2 button
-{
+.row2 button {
     background: black;
     border: 2px solid white;
     border-radius: 20px;
@@ -171,59 +172,50 @@
 
 /* hotel details starts here */
 
-.hotel
-{
+.hotel {
     margin-top: 20px;
     text-align: center;
 }
 
-.hotel label
-{
+.hotel label {
     color: white;
     font-size: 20px;
 }
 
-.hotel-fields
-{
+.hotel-fields {
     width: 100%;
     height: 50px;
-    background : linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5));
+    background: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5));
     border-radius: 10px;
     color: white;
 }
 
-#hotel-column1
-{
+#hotel-column1 {
     width: 25%;
     float: left;
 }
 
-#hotel-column2
-{
+#hotel-column2 {
     width: 20%;
     float: left;
 }
 
-#hotel-column3
-{
+#hotel-column3 {
     width: 20%;
     float: left;
 }
 
-#hotel-column4
-{
+#hotel-column4 {
     width: 20%;
     float: left;
 }
 
-#hotel-column5
-{
+#hotel-column5 {
     width: 15%;
     float: left;
 }
 
-.hotel-fields h3
-{
+.hotel-fields h3 {
     border: 2px solid white;
     border-radius: 10px;
     height: 50px;
@@ -231,22 +223,20 @@
     margin-bottom: 10px;
 }
 
-.hotel-field-values
-{
-    padding-top: 5px;    
+.hotel-field-values {
+    padding-top: 5px;
     padding-bottom: 5px;
     height: 60px;
     width: 100%;
     color: white;
     text-align: center;
-    background : linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.7, 0.7, 0.7, 0.7));
+    background: linear-gradient(rgba(0.6, 0.6, 0.6, 0.6), rgba(0.7, 0.7, 0.7, 0.7));
     border-radius: 10px;
-    margin-top : 5px;
-    margin-bottom : 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.hotel-field-values button
-{
+.hotel-field-values button {
     background: black;
     border: 2px solid white;
     border-radius: 20px;
@@ -255,9 +245,10 @@
     color: white;
 }
 
+
 /* this is for opening a popup window when i click book now button */
-.book-bus
-{
+
+.book-bus {
     visibility: hidden;
     height: 400px;
     width: 400px;
@@ -271,8 +262,9 @@
     color: black;
 }
 
+.book-bus span
+/* this is to print the X mark on modal popup */
 
-.book-bus span      /* this is to print the X mark on modal popup */
 {
     font-size: 20px;
     float: right;
@@ -280,68 +272,59 @@
     margin-top: 15px;
 }
 
-.book-bus span:hover
-{
+.book-bus span:hover {
     cursor: pointer;
 }
 
-.my-container
-{
+.my-container {
     margin: 20px 20px;
 }
 
-.book-bus h4
-{
+.book-bus h4 {
     margin-top: 45px;
-    
 }
 
-#left
-{
+#left {
     float: left;
     height: 50%;
     width: 50%;
     color: black;
 }
 
-#right
-{
+#right {
     float: left;
     height: 50%;
     width: 50%;
     color: black;
 }
 
-.my-container label
-{
+.my-container label {
     color: black;
     font-size: 15px;
 }
 
-.my-container input, select, option
-{
+.my-container input,
+select,
+option {
     border: 1px solid #000;
     border-radius: 5px;
     background: transparent;
     text-align: center;
 }
 
-.my-container input
-{
+.my-container input {
     width: 150px;
     height: 30px;
     color: black;
 }
 
-.my-container select
-{
+.my-container select {
     width: 40px;
     height: 30px;
     color: black;
 }
 
-.my-container button
-{
+.my-container button {
     background: linear-gradient(black, brown);
     width: 140px;
     height: 35px;
@@ -352,8 +335,100 @@
     font-size: 15px;
 }
 
-.my-container button:hover
+.my-container button:hover {
+    width: 142px;
+    height: 36px;
+}
+
+.book-hotel {
+    visibility: hidden;
+    height: 450px;
+    width: 400px;
+    border: 2px solid black;
+    background: linear-gradient( grey, rgb(26, 105, 105));
+    position: absolute;
+    text-align: center;
+    left: calc(50% - 200px);
+    top: calc(50% - 225px);
+    border-radius: 20px;
+    color: black;
+}
+
+.book-hotel span
+/* this is to print the X mark on modal popup */
+
 {
+    font-size: 20px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.book-hotel span:hover {
+    cursor: pointer;
+}
+
+.my-containerr {
+    margin: 20px 20px;
+}
+
+.book-hotel h4 {
+    margin-top: 45px;
+}
+
+#left {
+    float: left;
+    height: 50%;
+    width: 50%;
+    color: black;
+}
+
+#right {
+    float: left;
+    height: 50%;
+    width: 50%;
+    color: black;
+}
+
+.my-containerr label {
+    color: black;
+    font-size: 15px;
+}
+
+.my-containerr input,
+select,
+option {
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: transparent;
+    text-align: center;
+}
+
+.my-containerr input {
+    width: 150px;
+    height: 30px;
+    color: black;
+}
+
+.my-containerr select {
+    width: 40px;
+    height: 30px;
+    color: black;
+}
+
+.my-containerr button {
+    background: linear-gradient(rgb(56, 41, 39), rgb(30, 44, 44));
+    width: 140px;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.my-containerr button:hover {
     width: 142px;
     height: 36px;
 }

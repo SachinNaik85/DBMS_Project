@@ -17,6 +17,7 @@ function validate()
  
     if (!(name_regx.test(name)))
     {
+        document.getElementById("label").innerHTML = "invalid inputs for some fields";
         document.getElementById("label").style = "visibilty : visible";
         allclear = false;
         console.log('inside name', allclear);
@@ -24,6 +25,7 @@ function validate()
     
     if (!(email_regx.test(email)))
     {
+        document.getElementById("label").innerHTML = "invalid inputs for some fields";
         document.getElementById("label").style = "visibility : visible";
         allclear = false;
         console.log('inside email', allclear);
@@ -31,6 +33,7 @@ function validate()
 
     if (!(phone_regx.test(phone)))
     {
+        document.getElementById("label").innerHTML = "invalid inputs for some fields";
         document.getElementById("label").style = "visibility : visible";
         allclear = false;
         console.log('inside phone', allclear);
@@ -38,6 +41,7 @@ function validate()
 
     if (!(username_regx.test(username)))
     {
+        document.getElementById("label").innerHTML = "invalid inputs for some fields";
         document.getElementById("label").style = "visibility : visible";
         allclear = false;
         console.log('inside user name', allclear);
@@ -45,6 +49,7 @@ function validate()
 
     if (!(password_regx.test(password)))
     {
+        document.getElementById("label").innerHTML = "invalid inputs for some fields";
         document.getElementById("label").style = "visibility : visible";
         allclear = false;
         console.log('inside password', allclear);
@@ -52,6 +57,7 @@ function validate()
 
     if (password != confirm_password)
     {
+        document.getElementById("label").innerHTML = "invalid inputs for some fields";
         document.getElementById("label").style = "visibility : visible";
         allclear = false;
         console.log('inside confirm password', allclear);

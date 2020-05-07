@@ -41,36 +41,50 @@
     left: calc(50% - 50px);
 }
 
-.signin input
+.container
 {
-    position: relative;
-    top: 60px;
-    text-align: center;
-    height: 37px;
-    width: 300px;
+   padding-top: 70px;
+}
+
+.container input
+{
     background: transparent;
-    border: 2px solid white;
-    border-radius: 15px;
-    margin: 7px;
+    border: 1px solid white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.container label
+{
+    color: red;
+    font-family: monospace;
+    visibility: hidden;
+}
+
+.container span
+{
+    font-size: 14px;
     color: white;
 }
 
-
-.signin button
+.container button
 {
-    position: relative;
-    top: 65px;
-    margin: 10px;
-    width: 80px;
-    height: 30px;
-    background: linear-gradient(cyan, white ,skyblue);
+    margin-top: 15px;
     border: 2px solid white;
-    border-radius: 10px;
-    color: black;
-    font-weight: bold;
+    border-radius: 15px;
+    background: linear-gradient(black,darkblue, black);
+    height: 30px;
+    width: 80px;
+    color: white;
 }
 
-.signin button:hover
+.container button:hover
 {
-    cursor: pointer;
+    height: 31px;
+    width: 81px;
 }

@@ -13,23 +13,28 @@
     <section class="header">
         <div class="signin">
             <img src="{% static 'images/user/user2.png' %}">
-            <form  onsubmit="return validate()" action="signup" method="post">
-                {% csrf_token %}
-                <input autocomplete="off" type="text" placeholder="Name" id="name">
-                <br>
-                <input autocomplete="off" type="text" placeholder="User Name" id="username">
-                <br>
-                <input autocomplete="off" type="email" placeholder="Email Id" id="email">
-                <br>
-                <input autocomplete="off" type="text" placeholder="Phone Number" id="phone">
-                <br>
-                <input autocomplete="off" type="password" placeholder="Password" id="password">
-                <br>
-                <input autocomplete="off" type="password" placeholder="Confirm Password" id="con_password">
-                <br>
-                <label id="label"> Invalid inputs for some fields </label>
-                <button type="submit">Sign in</button>
-            </form>
+            <div class="container">
+                <form  onsubmit="return validate()" action="signup" method="post">
+                    {% csrf_token %}
+                    <input autocomplete="off" type="text" placeholder="Name" id="name" name="name">
+                    <br>
+                    <input autocomplete="off" type="text" placeholder="User Name" id="username" name="username">
+                    <br>
+                    <input autocomplete="off" type="email" placeholder="Email Id" id="email" name="email">
+                    <br>
+                    <input autocomplete="off" type="text" placeholder="Phone Number" id="phone" name="phone">
+                    <br>
+                    <input autocomplete="off" type="password" placeholder="Password" id="password" name="password">
+                    <br>
+                    <input autocomplete="off" type="password" placeholder="Confirm Password" id="con_password" name="confirm_password">
+                    <br>
+                    <label id="label"> {{error_message}} </label>
+                    <br>
+                    <span>Already have an account? <a href="login"> Login here </a></span>
+                    <br>
+                    <button type="submit">Sign in</button>
+                </form>
+            </div>
         </div>
     </section>
 </body>

@@ -3,3 +3,6 @@
 db.sqlite3
 manage.py
 essential.py
+db.sqlite3
+server.bat
+

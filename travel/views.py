@@ -7,7 +7,7 @@ sql = db.cursor()
 
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'authenticate' : False})
 
 
 def login(request):
@@ -23,7 +23,7 @@ def login(request):
             sql.execute(query)
             authenticated = sql.fetchall()
             if authenticated[0][0]:
-                return render(request, 'index.html')
+                return render(request, 'index.html', {'authenticate' : True, 'username' : username})
             else:
                 message = 'Invalid credentials'
                 return render(request, 'login.html', {'message' : message})
@@ -36,4 +36,12 @@ def signup(request):
         return render(request, 'signin.html')
 
     elif request.method == 'POST':
-        return render(request, 'index.html')
+        new_username = request.POST['username']
+        query = f'select exists(select * from user where username = "{new_username}")'
+        sql.execute(query)
+        valid_username = sql.fetchall()
+        if valid_username[0][0] == 0:
+            return render(request, 'index.html')
+        elif valid_username[0][0] == 1:
+            message = 'Username already taken'
+            return render(request, 'signin.html', {'error_message' : message})
