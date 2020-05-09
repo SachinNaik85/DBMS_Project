@@ -97,6 +97,38 @@
     font-family: fantasy;
 }
 
+.user_information
+{
+    visibility: hidden;
+    position: absolute;
+    right: 130px;
+    top: 75px;
+    height: 105px;
+    width: 130px;
+    background : rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+}
+
+.user_information label
+{
+    color: black;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    border: 2px solid black;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 28px;
+    width: 120px;
+}
+
+.user_information button
+{
+    background: none;
+    border: none;
+}
+
 .inputs input
 {
     color : white;

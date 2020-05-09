@@ -1,6 +1,8 @@
 import mysql.connector
 from essential import credential
-db = mysql.connector.connect(host="localhost", user="root", passwd=credential, database="travel")
+
+db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
+                             database=credential['using_db'], host='localhost')
 sql = db.cursor()
 
 

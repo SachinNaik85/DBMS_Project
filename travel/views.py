@@ -15,14 +15,14 @@ def login(request):
 
     elif request.method == 'POST':
         try:
-            db = mysql.connector.connect(user='root', passwd=credential, database='travel', host='localhost')
+            db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
+                                         database=credential['using_db'], host='localhost')
             sql = db.cursor()
             username = request.POST['username']
             password = request.POST['password']
             query = f'SELECT EXISTS (select * from user where username="{username}" and password=MD5("{password}"))'
             sql.execute(query)
             authenticated = sql.fetchall()
-            print(authenticated)
             if authenticated[0][0]:
                 return render(request, 'index.html', {'authenticate' : True, 'username' : username})
             else:
@@ -41,7 +41,8 @@ def signup(request):
 
     elif request.method == 'POST':
         try:
-            db = mysql.connector.connect(user='root', passwd=credential, database='travel', host='localhost')
+            db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
+                                         database=credential['using_db'], host='localhost')
             sql = db.cursor()
             new_username = request.POST['username']
             query = f'select exists(select * from user where username = "{new_username}")'
@@ -71,3 +72,7 @@ def signup(request):
 
         finally:
             sql.close()
+
+
+def logout(request):
+    return home(request)

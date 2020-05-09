@@ -8,6 +8,7 @@
     <title>DBMS Project</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="{% static 'js/index.js' %}"> </script>
 </head>
 
 <body>
@@ -25,8 +26,15 @@
 
          <img id="userimage" class="user" src="{% static 'images/user/user4.png' %}">
          <div class="mybox">
-            <label id="username">{{username}}</label>
+            <label id="username" onclick="details()">{{username}}</label>
          </div>
+
+        <div class="user_information">
+            <br><br><br>
+            <form action="logout">
+                <button type="submit"><label>logout</label></button>
+            </form>
+        </div>
          
         </div>
 

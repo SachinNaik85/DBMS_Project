@@ -47,7 +47,6 @@
 
 .login input
 {
-    
     background: transparent;
     margin: 7px;
     width: 300px;
@@ -81,5 +80,21 @@
 {
     color : #fff;
     font-size : 14px;
-    underline : none;
+}
+
+.reset_password
+{
+    visibility: hidden;
+    position: absolute;
+    height: 400px;
+    width: 500px;
+    background: cyan;
+    left: calc(50% - 250px);
+    top : calc(50% - 200px)
+}
+
+.reset_password h4
+{
+    color: black;
+    opacity: 1;
 }
