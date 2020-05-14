@@ -6,7 +6,7 @@
 
 .header
 {
-    background: linear-gradient(rgba(0.4, 0.4, 0.4, 0.4), rgba(0.4, 0.4, 0.4, 0.4)),
+    background: linear-gradient(rgba(0.4, 0.4, 0.4, 0.6), rgba(0.4, 0.4, 0.4, 0.6)),
     url(../images/backgrounds/backg2.jpg);
     background-size:cover;
     background-position: center;
@@ -47,7 +47,6 @@
 
 .login input
 {
-    
     background: transparent;
     margin: 7px;
     width: 300px;
@@ -75,4 +74,27 @@
 {
     color: red;
     font-family: monospace;
+}
+
+.inputs span
+{
+    color : #fff;
+    font-size : 14px;
+}
+
+.reset_password
+{
+    visibility: hidden;
+    position: absolute;
+    height: 400px;
+    width: 500px;
+    background: cyan;
+    left: calc(50% - 250px);
+    top : calc(50% - 200px)
+}
+
+.reset_password h4
+{
+    color: black;
+    opacity: 1;
 }

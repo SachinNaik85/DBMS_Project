@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:sachin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/bus_and_hotel.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/bus_and_hotel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +43,23 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="NaikSachin85 &lt;naiksachin8585@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/SachinNaik85/DBMS_project.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1a3S3tsHexY8TfvByuLFQMlnsGG" />
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -30,8 +68,86 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/projects/telusko" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/search" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Sachin\dbms\search" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.loaddata">
+    <configuration name="bus_and_hotel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dbms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/bus_and_hotel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="loaddata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dbms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/loaddata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dbms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/travel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/travel/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.loaddata" />
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.bus_and_hotel" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -44,36 +160,145 @@
       <option name="presentableId" value="Default" />
       <updated>1585962724885</updated>
     </task>
+    <task id="LOCAL-00001" summary="signup and login functions added">
+      <created>1588837519770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588837519770</updated>
+    </task>
+    <task id="LOCAL-00002" summary="small changes in video call">
+      <created>1588849170670</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588849170670</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="sachin" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="signup and login functions added" />
+    <MESSAGE value="small changes in video call" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes in video call" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1586863553949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1586863553949" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587566492606">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589174878638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587566492606" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1586865798934">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1589174878638" />
+    <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589004526359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586865798934" />
+    <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1589004526359" />
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1588849169530">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588849169530" />
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1588838429885">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1588838429885" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1589351071089">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589351071089" />
     <state x="505" y="280" key="Github.CreateGistDialog" timestamp="1586064384350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="280" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1586064384350" />
+    <state width="1345" height="213" key="GridCell.Tab.0.bottom" timestamp="1589350128258">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1589089436379">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
+    <state width="1345" height="213" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589350128258" />
+    <state width="1345" height="213" key="GridCell.Tab.0.center" timestamp="1589350128257">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1589089436379">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
+    <state width="1345" height="213" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589350128257" />
+    <state width="1345" height="213" key="GridCell.Tab.0.left" timestamp="1589350128257">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1589089436379">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
+    <state width="1345" height="213" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589350128257" />
+    <state width="1345" height="213" key="GridCell.Tab.0.right" timestamp="1589350128258">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1589089436379">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
+    <state width="1345" height="213" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589350128258" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1587190472697">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587190472697" />
+    <state x="530" y="278" key="VCS.ChangelistChooser" timestamp="1588838167208">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1588838167208" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1588849177115">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588849177115" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586042410277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586042410277" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589003594867">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1589003594867" />
+    <state x="385" y="152" key="git4idea.merge.GitPullDialog" timestamp="1588834198246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="385" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1588834198246" />
+    <state x="464" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1589003154663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="464" y="265" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589003154663" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587190178494">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
