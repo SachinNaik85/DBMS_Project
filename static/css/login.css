@@ -84,17 +84,40 @@
 
 .reset_password
 {
-    visibility: hidden;
     position: absolute;
-    height: 400px;
-    width: 500px;
+    height: 300;
+    width: 350px;
     background: cyan;
-    left: calc(50% - 250px);
-    top : calc(50% - 200px)
+    left: calc(50% - 150);
+    top : calc(50% - 150px);
+    opacity: 1;
 }
 
 .reset_password h4
 {
     color: black;
     opacity: 1;
+}
+
+.allow_password_reset
+{
+    position: absolute;
+    height: 300;
+    width: 350px;
+    background: cyan;
+    left: calc(50% - 150);
+    top : calc(50% - 150px);
+    opacity: 1;
+}
+
+.reset_done
+{
+    position: absolute;
+    height: 300;
+    width: 350px;
+    background: cyan;
+    left: calc(50% - 150);
+    top : calc(50% - 150px);
+    opacity: 1;
+
 }

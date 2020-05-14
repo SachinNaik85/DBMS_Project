@@ -14,9 +14,43 @@
         <div class="login">
             <img src="{% static 'images/user/user3.png' %}">
             <div class="inputs">
+                
+                {% if reset_wizard %}
                 <div class="reset_password">
-                    <h4> Welcome to password reset wizard! </h4>
+                    <h4> Password reset wizard! </h4>
+                    <form action="reset_password" method="post">
+                        {% csrf_token %}
+                        <label> Enter your username </label>
+                        <input name="username_in_reset" placeholder="enter your username">
+                        <button type="submit">check</button>
+                    </form>
+                    <label>{{error_message}}</label>
                 </div>
+                {% endif %}
+
+                {% if allowed_to_reset %}
+                    <div class="allow_password_reset">
+                        <h6> a 6 digit code has been sent to your registered email <br>
+                            {{email}} please enter the code below </h6>
+                        <form action="change_password" method="post">
+                            {% csrf_token %}
+                            <input name="key_from_user" type="text" placeholder="verification code">
+                            <input name="new_password" type="password" placeholder="new password">
+                            <button type="submit">Confirm change </button>
+                            <label>{{error_message}}</label>
+                        </form>
+                    </div>
+
+                {% endif %}
+
+                {% if reset_done %}
+                <div class="reset_done">
+                    <h3> password has been reset successfully </h3>
+                    <a href="login">login now</a>
+                </div>
+                {% endif %}
+
+            
                 <form onsubmit=" return validate()" action="login" method="post">
                     {% csrf_token %}
                     <input id="username" autocomplete="off" name="username" type="text" placeholder="Username or E mail">
@@ -27,7 +61,7 @@
                     <br>
                     <span>Don't have an account? <a href="signup"> Get Started! </a> </span>
                     <br>
-                    <span onclick="reset()"><a href="#">Forgot password</a></span> 
+                    <span><a href="reset_password">forgot password</a></span>
                     <br>
                     <button type="submit">Login</button>
                 </form>

@@ -26,8 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/travel/service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/bus_and_hotel.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/bus_and_hotel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +82,7 @@
       <recent name="E:\Sachin\dbms\search" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.loaddata">
+  <component name="RunManager" selected="Python.service">
     <configuration name="bus_and_hotel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dbms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,6 +125,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dbms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/travel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/travel/service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dbms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,6 +169,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.service" />
         <item itemvalue="Python.loaddata" />
         <item itemvalue="Python.views" />
         <item itemvalue="Python.bus_and_hotel" />
@@ -239,38 +266,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="280" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1586064384350" />
-    <state width="1345" height="213" key="GridCell.Tab.0.bottom" timestamp="1589350128258">
+    <state width="1345" height="212" key="GridCell.Tab.0.bottom" timestamp="1589453670165">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="213" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589350128258" />
-    <state width="1345" height="213" key="GridCell.Tab.0.center" timestamp="1589350128257">
+    <state width="1345" height="212" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589453670165" />
+    <state width="1345" height="212" key="GridCell.Tab.0.center" timestamp="1589453670165">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="213" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589350128257" />
-    <state width="1345" height="213" key="GridCell.Tab.0.left" timestamp="1589350128257">
+    <state width="1345" height="212" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589453670165" />
+    <state width="1345" height="212" key="GridCell.Tab.0.left" timestamp="1589453670165">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="213" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589350128257" />
-    <state width="1345" height="213" key="GridCell.Tab.0.right" timestamp="1589350128258">
+    <state width="1345" height="212" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589453670165" />
+    <state width="1345" height="212" key="GridCell.Tab.0.right" timestamp="1589453670165">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="213" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589350128258" />
+    <state width="1345" height="212" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589453670165" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1587190472697">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

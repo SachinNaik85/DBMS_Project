@@ -21,11 +21,3 @@ function validate()
     return allclear;
 }
 
-function reset()
-{
-    var reset_wizard = document.getElementsByClassName('reset_password');
-    for (var i=0; i< reset_wizard.length; i++)
-    {
-        reset_wizard[i].style = "visibility : visible";
-    }
-}
