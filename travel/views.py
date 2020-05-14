@@ -59,8 +59,7 @@ def signup(request):
                     query = f'insert into user values ("{username}", "{name}", "{email}", {phone}, MD5("{password}"));'
                     sql.execute(query)
                     db.commit()
-                    print(f'total rows{sql.rowcount}')
-                except mysql.connector.Error as e:
+                except mysql.connector.IntegrityError as e:
                     print(e)
                 return render(request, 'index.html')
             elif not_valid_username[0][0]:
