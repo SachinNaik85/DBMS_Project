@@ -26,14 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Sachin_Naik.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Sachin_Naik.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/bus_and_hotel.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/bus_and_hotel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +69,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/search" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Sachin\dbms\search" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.loaddata">
     <configuration name="bus_and_hotel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
