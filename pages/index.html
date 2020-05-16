@@ -59,7 +59,7 @@
         {% endif %}
 
         <h2>Put the roaming mode on..!</h2>
-        <form action="searchplace" method="POST">
+        <form action="search" method="POST">
             {% csrf_token %}
             <div class="inputs">
                 <input autocomplete="off" type="text" placeholder="From" name="boarding_place">
@@ -80,7 +80,7 @@
                 <div class="column1">
                     <div class="feature box">
                         <div class="feature-image">
-                            <form action="searchplace/Bengaluru" method="POST">
+                            <form action="search/Bengaluru" method="POST">
                             {% csrf_token %}
                             <button type="submit"><img src="{% static 'images/dest/blore1.jpg' %}"></button>
                             <div class="price">
@@ -102,7 +102,7 @@
                 <div class="column2">
                     <div class="feature box">
                         <div class="feature-image">
-                            <form action="searchplace/Coorg" method="POST">
+                            <form action="search/Coorg" method="POST">
                             {% csrf_token %}
                             <button type="submit"><img src="{% static 'images/coorg1.jpg' %}"></button>
                             <div class="price">
@@ -124,7 +124,7 @@
                 <div class="column3">
                     <div class="feature box">
                         <div class="feature-image">
-                            <form action="searchplace/Mumbai" method="POST">
+                            <form action="search/Mumbai" method="POST">
                             {% csrf_token %}
                             <button type="submit"><img src="{% static 'images/dest/mumbai3.jpg' %}"></button>
                             <div class="price">
@@ -150,7 +150,7 @@
                 <div class="column1">
                     <div class="feature box">
                         <div class="feature-image">
-                            <form action="searchplace/Kolkatta" method="POST">
+                            <form action="search/Kolkatta" method="POST">
                             {% csrf_token %}
                             <button type="submit"><img src="{% static 'images/dest/kolkata 2.jpg' %}"></button>
                             <div class="price">
@@ -172,7 +172,7 @@
                 <div class="column2">
                     <div class="feature box">
                         <div class="feature-image">
-                            <form action="searchplace/Manali" method="POST">
+                            <form action="search/Manali" method="POST">
                             {% csrf_token %}
                             <button type="submit"><img src="{% static 'images/dest/manali.jpg' %}"></button>
                             <div class="price">
@@ -194,7 +194,7 @@
                 <div class="column3">
                     <div class="feature box">
                         <div class="feature-image">
-                            <form action="searchplace/Munnar" method="POST">
+                            <form action="search/Munnar" method="POST">
                             {% csrf_token %}
                             <button type="submit"><img src="{% static 'images/dest/munnar2.jpg' %}"></button>
                             <div class="price">

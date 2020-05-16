@@ -67,12 +67,14 @@
                     <!-- end of column-4 -->
 
                     <div class="book-now-button" id="col-5">
-                        <button onclick="open_modal()"> Book Now </button>
+                        <button><a href="{% url 'book_bus' bus.busID %}"> Book Now </a></button>
+                        {% if booking_request %}
                         <section class="book-bus">
                             <span onclick=" close_modal()">&#10006;</span>
                             <h4> Enter your details below </h4>
                             <div class="my-container">
-                                <form action="{{ bus.busID }}">
+                                <form action="confirm_bus/{{busname}}" method="post">
+                                    {% csrf_token %}
                                     <div id="left">
                                         <label>Departure date</label>
                                         <input type="date" autocomplete="off"> <br><br>
@@ -96,6 +98,7 @@
                                 </form>
                             </div>
                         </section>
+                        {% endif %}
                     </div>
                 </div>
                 <!-- end of row 2 -->
@@ -148,12 +151,14 @@
                     </div>
 
                     <div class="book-now-button" id="hotel-column5">
-                        <button onclick="hotel_open_model()"> Book Now </button>
+                        <button> <a href="{% url 'book_hotel' hotel.name %}"> Book Now </a> </button>
+                        {% if hotel_request %}
                         <section class="book-hotel">
                             <span onclick="hotel_close_model()">&#10006;</span>
                             <h4> Enter your details below </h4>
                             <div class="my-containerr">
-                                <form action="{{hotel.name}}">
+                                <form action="confirm_hotel/{{hotel_name}}" method="post">
+                                    {% csrf_token %}
                                     <div id="left">
                                         <label>Check in date</label>
                                         <input type="date" autocomplete="off"> <br><br>
@@ -191,6 +196,8 @@
                                 </form>
                             </div>
                         </section>
+                        {% endif %}
+
                     </div>
                 </div>
                 {% endfor %}
