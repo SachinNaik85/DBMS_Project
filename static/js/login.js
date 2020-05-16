@@ -21,6 +21,6 @@ function validate() {
 function close_reset() {
     var modalpopup = document.getElementsByClassName('reset_password');
     for (var i = 0; i < modalpopup.length; i++) {
-        modalpopup[i].style = "visibility: hidden ; filter : blur(0px)";
+        modalpopup[i].style = "visibility: hidden" ;
     }
 }

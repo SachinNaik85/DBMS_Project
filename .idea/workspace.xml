@@ -26,12 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/travel/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Sachin_Naik.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Sachin_Naik.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/booking_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/booking_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/bus_and_hotel.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/bus_and_hotel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -314,14 +314,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586042410277" />
-    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589003594867">
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589603803100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1589003594867" />
-    <state x="385" y="152" key="git4idea.merge.GitPullDialog" timestamp="1588834198246">
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1589603803100" />
+    <state x="385" y="152" key="git4idea.merge.GitPullDialog" timestamp="1589603823647">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="385" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1588834198246" />
+    <state x="385" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1589603823647" />
     <state x="464" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1589003154663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

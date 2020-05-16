@@ -30,19 +30,23 @@
                     </form>
                     <label>{{error_message}}</label>
                 </div>
-                {% endif %} {% if allowed_to_reset %}
+                {% endif %}
+
+                {% if allowed_to_reset %}
                 <div class="allow_password_reset">
                     <h6> a 6 digit code has been sent to your registered email <br> {{email}} please enter the code below </h6>
                     <form action="change_password" method="post">
                         {% csrf_token %}
-                        <input name="key_from_user" type="text" placeholder="verification code">
-                        <input name="new_password" type="password" placeholder="new password">
-                        <button type="submit">Confirm change </button>
+                        <input name="key_from_user" type="text" placeholder="verification code" autocomplete="off">
+                        <input name="new_password" type="password" placeholder="new password" autocomplete="off">
+                        <button type="submit">Confirm change</button>
                         <label>{{error_message}}</label>
                     </form>
                 </div>
 
-                {% endif %} {% if reset_done %}
+                {% endif %}
+
+                {% if reset_done %}
                 <div class="reset_done">
                     <h3> password has been reset successfully </h3>
                     <a href="login">login now</a>

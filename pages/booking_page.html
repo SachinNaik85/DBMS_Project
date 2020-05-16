@@ -72,7 +72,7 @@
                             <span onclick=" close_modal()">&#10006;</span>
                             <h4> Enter your details below </h4>
                             <div class="my-container">
-                                <form action="{% url bus.busID %}">
+                                <form action="{{ bus.busID }}">
                                     <div id="left">
                                         <label>Departure date</label>
                                         <input type="date" autocomplete="off"> <br><br>
