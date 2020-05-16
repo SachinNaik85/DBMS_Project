@@ -136,4 +136,5 @@ def change_password(request):
 
     elif key_from_user != password_reset_data['secret_key']:
         return render(request, 'login.html',
-                      {'allowed_to_reset' : True, 'email' : password_reset_data['email'], 'error_message' : "invalid key"})
+                      {'allowed_to_reset' : True, 'email' : password_reset_data['email'],
+                       'error_message' : "invalid key"})
