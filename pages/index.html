@@ -8,7 +8,8 @@
     <title>DBMS Project</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="{% static 'js/index.js' %}"> </script>
+    <script src="{% static 'js/index.js' %}">
+    </script>
 </head>
 
 <body>
@@ -24,37 +25,38 @@
                 <button id="login" type="submit" class="login-btn">Log in</button>
             </form>
 
-         <img id="userimage" class="user" src="{% static 'images/user/user4.png' %}">
-         <div class="mybox">
-            <label id="username" onclick="details()">{{username}}</label>
-         </div>
+            <img id="userimage" class="user" src="{% static 'images/user/user4.png' %}">
+            <div class="mybox">
+                <label id="username" onclick="details()">username</label>
+            </div>
 
-        <div class="user_information">
-            <br><br><br>
-            <form action="logout">
-                <button type="submit"><label>logout</label></button>
-            </form>
-        </div>
-         
+            <div class="user_information">
+                <br>
+                <form action="mybookings">
+                    <button id="mybooking" type="submit" class="mybooking-btn"><label>Mybookins</label></button>
+                </form>
+                <form action="logout">
+                    <button type="submit"><label>logout</label></button>
+                </form>
+            </div>
+
         </div>
 
-        {% if authenticate == True %}
+        {% if True %}
         <script type="text/javascript">
-        (
-            function()
-            {
-                document.getElementById('login').style = "visibility : hidden";
-                document.getElementById('signup').style = "visibility : hidden";
-                document.getElementById('userimage').style = "visibility : visible";
-                document.getElementById('username').style = "visibility : visible";
-                var mybox = document.getElementsByClassName('mybox');
-                for (var i =0 ; i<mybox.length; i++)
-                {
-                    mybox[i].style = "visibility : visible";
+            (
+                function() {
+                    document.getElementById('login').style = "visibility : hidden";
+                    document.getElementById('signup').style = "visibility : hidden";
+                    document.getElementById('userimage').style = "visibility : visible";
+                    document.getElementById('username').style = "visibility : visible";
+                    var mybox = document.getElementsByClassName('mybox');
+                    for (var i = 0; i < mybox.length; i++) {
+                        mybox[i].style = "visibility : visible";
+                    }
                 }
-            }
-        )
-        ();
+            )
+            ();
         </script>
         {% endif %}
 
@@ -81,19 +83,17 @@
                     <div class="feature box">
                         <div class="feature-image">
                             <form action="search/Bengaluru" method="POST">
-                            {% csrf_token %}
-                            <button type="submit"><img src="{% static 'images/dest/blore1.jpg' %}"></button>
-                            <div class="price">
-                                <label><button type="submit">Bengaluru</button></label>
-                                <p>Rs. 10000</p>
-                                <h6>3 days, 4 nights</h6>
-                            </div>
+                                {% csrf_token %}
+                                <button type="submit"><img src="{% static 'images/dest/blore1.jpg' %}"></button>
+                                <div class="price">
+                                    <label><button type="submit">Bengaluru</button></label>
+                                    <p>Rs. 10000</p>
+                                    <h6>3 days, 4 nights</h6>
+                                </div>
                             </form>
                             <div class="detail">
                                 <p>
-                                    Bengaluru is one of the most beautiful city<br> 
-                                    Package includes WonderLa and cubbon park <br> 
-                                    Bus and flight service is available
+                                    Bengaluru is one of the most beautiful city<br> Package includes WonderLa and cubbon park <br> Bus and flight service is available
                                 </p>
                             </div>
                         </div>
@@ -103,19 +103,17 @@
                     <div class="feature box">
                         <div class="feature-image">
                             <form action="search/Coorg" method="POST">
-                            {% csrf_token %}
-                            <button type="submit"><img src="{% static 'images/coorg1.jpg' %}"></button>
-                            <div class="price">
-                                <label ><button type="submit">Coorg</button></label>
-                                <p>Rs. 12000</p>
-                                <h6>4 days, 5 nights</h6>
-                            </div>
+                                {% csrf_token %}
+                                <button type="submit"><img src="{% static 'images/coorg1.jpg' %}"></button>
+                                <div class="price">
+                                    <label><button type="submit">Coorg</button></label>
+                                    <p>Rs. 12000</p>
+                                    <h6>4 days, 5 nights</h6>
+                                </div>
                             </form>
                             <div class="detail">
                                 <p>
-                                    Coorg is a hill town in southern india<br> 
-                                    Package includes Madikeri Fort and Abby falls <br> 
-                                    Bus service is available
+                                    Coorg is a hill town in southern india<br> Package includes Madikeri Fort and Abby falls <br> Bus service is available
                                 </p>
                             </div>
                         </div>
@@ -125,19 +123,17 @@
                     <div class="feature box">
                         <div class="feature-image">
                             <form action="search/Mumbai" method="POST">
-                            {% csrf_token %}
-                            <button type="submit"><img src="{% static 'images/dest/mumbai3.jpg' %}"></button>
-                            <div class="price">
-                                <label><button type="submit">Mumbai</button></label>
-                                <p>Rs. 25000</p>
-                                <h6>5 days, 6 nights</h6>
-                            </div>
+                                {% csrf_token %}
+                                <button type="submit"><img src="{% static 'images/dest/mumbai3.jpg' %}"></button>
+                                <div class="price">
+                                    <label><button type="submit">Mumbai</button></label>
+                                    <p>Rs. 25000</p>
+                                    <h6>5 days, 6 nights</h6>
+                                </div>
                             </form>
                             <div class="detail">
                                 <p>
-                                    Mumbai is India's largest city in west coast <br> 
-                                    Package includes gateway of india and Kanheri <br> 
-                                    caves. Bus and flight service is available
+                                    Mumbai is India's largest city in west coast <br> Package includes gateway of india and Kanheri <br> caves. Bus and flight service is available
                                 </p>
                             </div>
                         </div>
@@ -151,19 +147,17 @@
                     <div class="feature box">
                         <div class="feature-image">
                             <form action="search/Kolkatta" method="POST">
-                            {% csrf_token %}
-                            <button type="submit"><img src="{% static 'images/dest/kolkata 2.jpg' %}"></button>
-                            <div class="price">
-                                <label><button type="submit">Kolkatta</button></label>
-                                <p>Rs. 20000</p>
-                                <h6>4 days, 5 nights</h6>
-                            </div>
+                                {% csrf_token %}
+                                <button type="submit"><img src="{% static 'images/dest/kolkata 2.jpg' %}"></button>
+                                <div class="price">
+                                    <label><button type="submit">Kolkatta</button></label>
+                                    <p>Rs. 20000</p>
+                                    <h6>4 days, 5 nights</h6>
+                                </div>
                             </form>
                             <div class="detail">
                                 <p>
-                                    kolkata is known as "The City of Joy".<br> 
-                                    package includes Victoria memorial and Indian<br> 
-                                    Museum. Bus and flight service is available
+                                    kolkata is known as "The City of Joy".<br> package includes Victoria memorial and Indian<br> Museum. Bus and flight service is available
                                 </p>
                             </div>
                         </div>
@@ -173,19 +167,17 @@
                     <div class="feature box">
                         <div class="feature-image">
                             <form action="search/Manali" method="POST">
-                            {% csrf_token %}
-                            <button type="submit"><img src="{% static 'images/dest/manali.jpg' %}"></button>
-                            <div class="price">
-                                <label><button type="submit">Manali</button></label>
-                                <p>Rs. 40000</p>
-                                <h6>5 days, 6nights </h6>
-                            </div>
+                                {% csrf_token %}
+                                <button type="submit"><img src="{% static 'images/dest/manali.jpg' %}"></button>
+                                <div class="price">
+                                    <label><button type="submit">Manali</button></label>
+                                    <p>Rs. 40000</p>
+                                    <h6>5 days, 6nights </h6>
+                                </div>
                             </form>
                             <div class="detail">
                                 <p>
-                                    Manali is a Himalayan resort town in India<br>
-                                     Package includes Solang and Parvati Valley <br> 
-                                     Bus and Train service is available.
+                                    Manali is a Himalayan resort town in India<br> Package includes Solang and Parvati Valley <br> Bus and Train service is available.
                                 </p>
                             </div>
                         </div>
@@ -195,19 +187,17 @@
                     <div class="feature box">
                         <div class="feature-image">
                             <form action="search/Munnar" method="POST">
-                            {% csrf_token %}
-                            <button type="submit"><img src="{% static 'images/dest/munnar2.jpg' %}"></button>
-                            <div class="price">
-                                <label><button type="submit">Munnar</button></label>
-                                <p>Rs. 15000</p>
-                                <h6>3 days, 4 nights</h6>
-                            </div>
+                                {% csrf_token %}
+                                <button type="submit"><img src="{% static 'images/dest/munnar2.jpg' %}"></button>
+                                <div class="price">
+                                    <label><button type="submit">Munnar</button></label>
+                                    <p>Rs. 15000</p>
+                                    <h6>3 days, 4 nights</h6>
+                                </div>
                             </form>
                             <div class="detail">
                                 <p>
-                                    Munnar is a town in western Ghats <br> 
-                                    package includes Nilgirim tahr and Lakkam <br> 
-                                    Waterfalls. bus and flight service is available
+                                    Munnar is a town in western Ghats <br> package includes Nilgirim tahr and Lakkam <br> Waterfalls. bus and flight service is available
                                 </p>
                             </div>
                         </div>
@@ -225,9 +215,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="review">
-                        <p>Genuinly the best money I've spent!
-                            I have had the absolute best trip in Madikeri.
-                            And also met some amazing people here.
+                        <p>Genuinly the best money I've spent! I have had the absolute best trip in Madikeri. And also met some amazing people here.
                         </p>
 
                         <h5>Chetana hegde</h5>
