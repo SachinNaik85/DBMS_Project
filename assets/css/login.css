@@ -1,26 +1,22 @@
-*
-{
+* {
     padding: 0;
     margin: 0;
 }
 
-.header
-{
-    background: linear-gradient(rgba(0.4, 0.4, 0.4, 0.6), rgba(0.4, 0.4, 0.4, 0.6)),
-    url(../images/backgrounds/backg2.jpg);
-    background-size:cover;
+.header {
+    background: linear-gradient(rgba(0.4, 0.4, 0.4, 0.6), rgba(0.4, 0.4, 0.4, 0.6)), url(../images/backgrounds/backg2.jpg);
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height : 100%;
+    height: 100%;
     text-align: center;
 }
 
-.login
-{
+.login {
     width: 350px;
     height: 300px;
     border-radius: 5%;
-    background :black;
+    background: black;
     top: 50%;
     left: 50%;
     position: relative;
@@ -29,13 +25,11 @@
     opacity: 85%;
 }
 
-.inputs
-{
+.inputs {
     padding-top: 60px;
 }
 
-.login img
-{
+.login img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -45,9 +39,7 @@
     left: calc(50% - 50px);
 }
 
-.login input
-{
-    
+.login input {
     background: transparent;
     margin: 7px;
     width: 300px;
@@ -58,9 +50,7 @@
     color: white;
 }
 
-.login button
-{
-    
+.login button {
     margin: 10px;
     height: 35px;
     width: 70px;
@@ -71,15 +61,135 @@
     font-weight: bold;
 }
 
-.login label
-{
+.login label {
     color: red;
     font-family: monospace;
 }
 
-.inputs span
-{
-    color : #fff;
-    font-size : 14px;
-    underline : none;
+.inputs span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.reset_password {
+    position: absolute;
+    height: 375;
+    width: 400px;
+    background-image: url(../images/user/user5.png);
+    /*background: rgb(194, 190, 190);*/
+    left: calc(50% - 150);
+    top: calc(50% - 200px);
+    opacity: 10px;
+    border-radius: 5%;
+}
+
+.reset_password span {
+    font-size: 20px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.reset_password span:hover {
+    cursor: pointer;
+}
+
+.reset_password img {
+    height: 100px;
+    width: 150px;
+    border-radius: 0px;
+    border: transparent;
+    position: absolute;
+    top: 10px;
+    opacity: 50%;
+    margin-left: -12.5px;
+}
+
+.reset_password h4 {
+    margin-top: 125px;
+    color: black;
+    opacity: 1;
+    font-size: xx-large;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reset_password input {
+    background: transparent;
+    margin: 15px;
+    width: 300px;
+    height: 35px;
+    border: 2px solid darkgray;
+    border-radius: 15px;
+    text-align: center;
+    color: rgb(121, 100, 100);
+}
+
+.reset_password button {
+    margin: 15px;
+    height: 35px;
+    width: 70px;
+    background: darkgray;
+    border: 2px solid darkslategray;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.allow_password_reset {
+    position: absolute;
+    height: 350;
+    width: 375px;
+    background: teal;
+    left: calc(50% - 150);
+    top: calc(50% - 200px);
+    opacity: 1;
+    border-radius: 5%;
+}
+
+.allow_password_reset h6 {
+    margin: 25px;
+    color: black;
+    opacity: 1;
+    font-size: large;
+}
+
+.allow_password_reset button {
+    margin: 20px;
+    height: 35px;
+    width: 170px;
+    background: darkslategray;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.reset_done {
+    position: absolute;
+    height: 350;
+    width: 375px;
+    background: aliceblue;
+    left: calc(50% - 150);
+    top: calc(50% - 200px);
+    opacity: 1;
+    border-radius: 5%;
+}
+
+.reset_done h3 {
+    margin: 25px;
+    margin-top: 50px;
+    opacity: 1;
+    font-size: xx-large;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.reset_done a {
+    font-size: 125%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-style: italic;
 }

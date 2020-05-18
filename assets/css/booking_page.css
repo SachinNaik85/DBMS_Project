@@ -249,7 +249,7 @@
 /* this is for opening a popup window when i click book now button */
 
 .book-bus {
-    visibility: hidden;
+    visibility: visible;
     height: 400px;
     width: 400px;
     border: 2px solid black;
