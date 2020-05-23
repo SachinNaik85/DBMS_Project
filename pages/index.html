@@ -27,13 +27,14 @@
 
             <img id="userimage" class="user" src="{% static 'images/user/user4.png' %}">
             <div class="mybox">
-                <label id="username" onclick="details()">{{username}}</label>
+                <label id="username" onclick="details()">username</label>
+
             </div>
 
             <div class="user_information">
+                <span onclick=" close_usinfo()">&#10005;</span>
                 <br>
-                <form action="mybookings">
-                    <button id="mybooking" type="submit" class="mybooking-btn"><label>Mybookings</label></button>
+                <button id="mybooking" type="submit" class="mybooking-btn"><label>Mybookings</label></button>
                 </form>
                 <form action="logout">
                     <button type="submit"><label>logout</label></button>
@@ -42,7 +43,7 @@
 
         </div>
 
-        {% if authenticate %}
+        {% if True%}
         <script type="text/javascript">
             (
                 function() {
@@ -64,7 +65,7 @@
         <form onsubmit="return is_valid_search()" action="search" method="post">
             {% csrf_token %}
             <div class="inputs">
-                <input id="from" autocomplete="off" type="text" placeholder="From"  name="origin">
+                <input id="from" autocomplete="off" type="text" placeholder="From" name="origin">
                 <input id="to" autocomplete="off" type="text" placeholder="city or place you want to visit" name="destination">
                 <br>
                 <button type="submit">Search</button>
