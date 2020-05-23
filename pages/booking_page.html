@@ -14,6 +14,15 @@
     <section class="header">
         <h1>{{place}}</h1>
         <div class="mycontainer">
+            {% if booking_confirmed %}
+                <div class="booking_confirmed">
+                    <h6 onclick="close_booking_modal()">&#10060;</h6>
+                    <label>BOOKING CONFIRMED</label>
+                    <div class="circle">
+                        <span>&#10004;</span>
+                    </div>
+                </div>
+            {% endif %}
             <div class="bus">
                 <label> Choose your bus here </label>
                 <div class="bus-fields">
@@ -73,29 +82,32 @@
                             <span onclick=" close_modal()">&#10006;</span>
                             <h4> Enter your details below </h4>
                             <div class="my-container">
-                                <form action="confirm_bus/{{busname}}" method="post">
+
+                                <form onsubmit=" return validate_bus()" action="confirm_bus/{{busname}}" method="post">
                                     {% csrf_token %}
                                     <div id="left">
                                         <label>Departure date</label>
-                                        <input type="date" autocomplete="off"> <br><br>
+                                        <input type="date" autocomplete="off" name="date" id="departuredate"> <br><br>
                                         <label>Username</label>
-                                        <input type="text" autocomplete="off">
+                                        <input type="text" name="username" id="BusUsername" autocomplete="off">
                                     </div>
 
                                     <div id="right">
                                         <label>Number of seats</label><br>
-                                        <select autocomplete="off">
+                                        <select autocomplete="off" name="seats" id="seats">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>
                                                 <br>
-                                            </select><br><br>
+                                        </select><br><br>
                                         <label> password</label>
-                                        <input type="password" autocomplete="off">
+                                        <input type="password" autocomplete="off" name="password" id="password">
                                     </div>
+                                    <label id="error_message">{{error_message}}</label><br>
                                     <button type="submit">Confirm booking</button>
                                 </form>
+
                             </div>
                         </section>
                         {% endif %}
@@ -157,13 +169,13 @@
                             <span onclick="hotel_close_model()">&#10006;</span>
                             <h4> Enter your details below </h4>
                             <div class="my-containerr">
-                                <form action="confirm_hotel/{{hotel_name}}" method="post">
+                                <form onsubmit="return validate_hotel()" action="confirm_hotel/{{hotel_name}}" method="post">
                                     {% csrf_token %}
                                     <div id="left">
                                         <label>Check in date</label>
-                                        <input type="date" autocomplete="off"> <br><br>
+                                        <input id="checkin" type="date" autocomplete="off" name="checkin"> <br><br>
                                         <label>Number of guests</label><br>
-                                        <select autocomplete="off">
+                                        <select autocomplete="off"  name="guests" id="guests">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -173,14 +185,14 @@
                                                 <option value="7">7</option>
                                                 <option value="8">8</option>
                                                 <br>
-                                            </select><br><br>
+                                        </select><br><br>
                                         <label>Username</label>
-                                        <input type="text" autocomplete="off">
+                                        <input id="HotelUsername" type="text"  name="username" autocomplete="off">
                                     </div>
 
                                     <div id="right">
                                         <label>Check out date</label>
-                                        <input type="date" autocomplete="off"> <br><br>
+                                        <input id="checkout" type="date" autocomplete="off" name="checkout"> <br><br>
                                         <label>Number of rooms</label><br>
                                         <select autocomplete="off">
                                                 <option value="1">1</option>
@@ -188,10 +200,11 @@
                                                 <option value="3">3</option>
                                                 <option value="4">4</option>
                                                 <br>
-                                            </select><br><br>
+                                        </select><br><br>
                                         <label> password</label>
-                                        <input type="password" autocomplete="off">
+                                        <input id="hotel_password" type="password" autocomplete="off" name="password">
                                     </div>
+                                    <br><label id="hotel_error_message"> {{error_message}} </label><br>
                                     <button type="submit">Confirm booking</button>
                                 </form>
                             </div>

@@ -3,7 +3,11 @@
     <words>
       <w>allclear</w>
       <w>busdata</w>
+      <w>busid</w>
       <w>busname</w>
+      <w>checkdate</w>
+      <w>checkin</w>
+      <w>dataset</w>
       <w>endfor</w>
       <w>gmail</w>
       <w>hoteldata</w>
