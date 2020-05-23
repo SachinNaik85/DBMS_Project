@@ -92,6 +92,19 @@
     font-family: fantasy;
 }
 
+.user_information span {
+    font-size: 15px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 2px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.user_information span:hover {
+    cursor: pointer;
+}
+
 .user_information {
     visibility: hidden;
     position: absolute;
