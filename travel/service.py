@@ -38,3 +38,34 @@ def send_email(reciever):
     except Exception as e:
         print('error in sending mail')
 
+
+def read_status():
+    file = open('login_status.txt', 'r')
+    file_data = file.read()
+    file_data = file_data.split()
+    status = bool(int(file_data[0]))
+    file.close()
+    return status
+
+
+def write_status(status, name):
+    file = open('login_status.txt', 'w')
+    line = int(status)
+    file.writelines(str(line))
+    file.writelines('\n')
+    file.writelines(str(name))
+    file.close()
+    return
+
+
+def read_name():
+    file = open('login_status.txt', 'r')
+    try:
+        file_data = file.read()
+        file_data = file_data.split()
+        name = str(file_data[1])
+        return name
+    except IndexError as e:
+        print(e)
+    finally:
+        file.close()

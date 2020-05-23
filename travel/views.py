@@ -7,7 +7,8 @@ password_reset_data = {}
 
 
 def home(request):
-    return render(request, 'index.html', {'authenticate' : False})
+    return render(request, 'index.html',
+                  {'authenticate' : service.read_status(), 'username' : service.read_name()})
 
 
 def login(request):
@@ -30,7 +31,9 @@ def login(request):
                 pass
             authenticated = sql.fetchall()
             if authenticated[0][0]:
-                return render(request, 'index.html', {'authenticate' : True, 'username' : username})
+                service.write_status(1, username)
+                return render(request, 'index.html',
+                              {'authenticate' : service.read_status(), 'username' : service.read_name()})
             else:
                 message = 'Invalid credentials'
                 return render(request, 'login.html', {'message' : message, 'reset_wizard' : False})
@@ -83,6 +86,7 @@ def signup(request):
 
 
 def logout(request):
+    service.write_status(0, '')
     return home(request)
 
 
@@ -157,3 +161,7 @@ def change_password(request):
         return render(request, 'login.html',
                       {'allowed_to_reset' : True, 'email' : password_reset_data['email'],
                        'error_message' : "invalid key"})
+
+
+def mybookings(request):
+    return render(request, 'mybookings.html')
