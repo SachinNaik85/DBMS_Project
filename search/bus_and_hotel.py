@@ -2,13 +2,22 @@ import mysql.connector
 from essential import credential
 
 
-def create_bus():
-    db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'], database="travel")
-    sql = db.cursor()
-    sql.execute("select * from bus;")
-    busdata = sql.fetchall()
-    buses = []
-    sql.close()
+def create_bus(source, destination):
+    try:
+        db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'], database="travel")
+        sql = db.cursor()
+        try:
+            query = f'select * from bus where source like "%{source}%" and destination like "%{destination}%"'
+            sql.execute(query)
+        except mysql.connector.ProgrammingError as e:
+            print(e)
+        busdata = sql.fetchall()
+        buses = []
+    except mysql.connector.Error as e:
+        print(e)
+        pass
+    finally:
+        sql.close()
 
     class Bus:
         busID = str
@@ -29,13 +38,22 @@ def create_bus():
     return buses
 
 
-def create_hotel():
-    db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'], database="travel")
-    sql = db.cursor()
-    sql.execute("select * from hotel;")
-    hotel_data = sql.fetchall()
-    hotels = []
-    sql.close()
+def create_hotel(destination):
+    try:
+        db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'], database="travel")
+        sql = db.cursor()
+        try:
+            query = f'select * from hotel where location like "%{destination}%"'
+            sql.execute(query)
+        except mysql.connector.ProgrammingError as e:
+            print(e)
+        hotel_data = sql.fetchall()
+        hotels = []
+    except mysql.connector.Error as e:
+        print(e)
+        pass
+    finally:
+        sql.close()
 
     class Hotel:
         name = str
@@ -47,8 +65,8 @@ def create_hotel():
         hotel1 = Hotel()
         hotel1.name = i[0]
         hotel1.type = i[1]
-        hotel1.price = i[2]
-        hotel1.location = i[3]
+        hotel1.price = str(i[3]) + ' INR'
+        hotel1.location = i[2]
         hotels.append(hotel1)
     print(hotels)
 

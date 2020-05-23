@@ -1,53 +1,148 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from search.bus_and_hotel import create_bus, create_hotel
-
-place_name = ''  # this is to print the place name which is being searched
-bus_name = ''
+import mysql.connector
+from essential import credential
+from search import service
+redirect_status = False
+confirm_status = False
+credential_error = False
 
 
 def home(request):
-    global place_name
     try:
-        place_name = request.POST['search_place']  # fetching the place name which was searched
+        destination = request.POST['destination']  # fetching the place name which was searched
+        origin = request.POST['origin']
+        service.write_file(origin, destination)
     except Exception as e:
         pass
-    return render(request, 'search.html', {'place': place_name})
+    place = service.read_file()
+    dataset = {'place' : place[1]}
+    return render(request, 'search.html', dataset)
 
 
 def features_home(request, feature_name):
-    global place_name
     try:
-        place_name = feature_name
+        destination = feature_name
+        service.write_file('', destination)
     except Exception as e:
         pass
-    return render(request, 'search.html', {'place': place_name})
+    place = service.read_file()
+    dataset = {'place' : place[1]}
+    return render(request, 'search.html', dataset)
 
 
 def booking_request(request):
-    global place_name
-    hotels = create_hotel()
-    buses = create_bus()
-    return render(request, 'booking_page.html', {'place': place_name, 'buses': buses, 'hotels': hotels})
+    global confirm_status
+    place = service.read_file()
+    hotels = create_hotel(place[1])
+    buses = create_bus(place[0], place[1])
+    dataset = {'buses' : buses, 'hotels' : hotels, 'place' : place[1]}
+    if confirm_status:
+        dataset['booking_confirmed'] = True
+        confirm_status = False
+    print(dataset)
+    return render(request, 'booking_page.html', dataset)
 
 
 def book_bus(request, busname):
+    global redirect_status, confirm_status
+    place = service.read_file()
+    hotels = create_hotel(place[1])
+    buses = create_bus(place[0], place[1])
     if request.method == 'GET':
-        hotels = create_hotel()
-        buses = create_bus()
-        return render(request, 'booking_page.html', {'place': place_name, 'buses': buses,
-                                                     'hotels': hotels, 'booking_request': True, 'busname': busname})
+        dataset = {'place': place[1], 'buses': buses, 'hotels': hotels,
+                   'booking_request': True, 'busname': busname, }
+        if redirect_status:
+            redirect_status = False
+            dataset['error_message'] = "Invalid credentials"
+
+        return render(request, 'booking_page.html', dataset)
 
     if request.method == 'POST':
-        return HttpResponse(f'booking confirmed for bus {busname}')
+        username = request.POST['username']
+        password = request.POST['password']
+        date = request.POST['date']
+        seats = request.POST['seats']
+
+        try:
+            db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'],
+                                         database="travel")
+            sql = db.cursor()
+
+            allowed_to_book = service.auth_user(username, password)
+            if not allowed_to_book:
+                redirect_status = True
+                return redirect(to='book_bus', busname=busname,)
+
+            if allowed_to_book:
+                fair_date = service.checkdate(date)
+                if not fair_date:
+                    return redirect('book_bus', busname=busname)
+
+                elif fair_date:
+                    try:
+                        query = f'insert into bus_bookings values( "{busname}", "{username}", ' \
+                                f'"{service.date()}", "{service.time()}" ,"{date}" , {seats} , ' \
+                                f'{service.calc_amount(busname, seats)})'
+                        sql.execute(query)
+                        db.commit()
+                        confirm_status = True
+                        return redirect(to='booking_page')
+                    except mysql.connector.ProgrammingError as e:
+                        print(e)
+                        return redirect('book_bus', busname=busname)
+
+        except mysql.connector.Error as e:
+            print(e)
+            pass
 
 
 def book_hotel(request, hotel_name):
+    global credential_error, confirm_status
     if request.method == 'GET':
-        hotels = create_hotel()
-        buses = create_bus()
-        return render(request, 'booking_page.html', {'place': place_name, 'buses': buses,
-                                                     'hotels': hotels, 'hotel_request': True, 'hotel_name': hotel_name})
+        place = service.read_file()
+        hotels = create_hotel(place[1])
+        buses = create_bus(place[0], place[1])
+        dataset = {'place': place[1], 'buses': buses,
+                   'hotels': hotels, 'hotel_request': True, 'hotel_name': hotel_name}
+        if credential_error:
+            dataset['error_message'] = "Invalid credentials"
+            credential_error = False
+        return render(request, 'booking_page.html', dataset)
 
     elif request.method == 'POST':
-        return HttpResponse(f'booking confirmed for hotel {hotel_name}')
+        username = request.POST['username']
+        password = request.POST['password']
+        checkin = request.POST['checkin']
+        checkout = request.POST['checkout']
+        guests = request.POST['guests']
+
+        valid_date = service.checkdate(checkin) and service.checkdate(checkout)
+        days = service.count_days(checkin, checkout)
+        valid_user = service.auth_user(username, password)
+
+        if not valid_user or not valid_date or not days:
+            credential_error = True
+            return redirect(to='book_hotel', hotel_name=hotel_name)
+
+        elif valid_user and days and valid_date:
+            try:
+                db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'],
+                                             database="travel")
+                sql = db.cursor()
+                try:
+                    query = f'insert into hotel_bookings values("{hotel_name}", "{username}", "{service.date()}",' \
+                            f'"{service.time()}", "{checkin}", "{checkout}",{guests}, {service.rooms(guests)},' \
+                            f'{service.hotel_price(hotel_name, guests, checkin, checkout)})'
+                    sql.execute(query)
+                    db.commit()
+                    confirm_status = True
+                    return redirect(to='booking_page')
+                except mysql.connector.ProgrammingError as e:
+                    print(e)
+                    pass
+
+            except mysql.connector.Error as e:
+                print(e)
+                pass

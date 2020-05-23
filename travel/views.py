@@ -22,15 +22,19 @@ def login(request):
             sql = db.cursor()
             username = request.POST['username']
             password = request.POST['password']
-            query = f'SELECT EXISTS (select * from user where username="{username}" and password=MD5("{password}"))'
-            sql.execute(query)
+            try:
+                query = f'SELECT EXISTS (select * from user where username="{username}" and password=MD5("{password}"))'
+                sql.execute(query)
+            except mysql.connector.ProgrammingError as e:
+                print(e)
+                pass
             authenticated = sql.fetchall()
             if authenticated[0][0]:
                 return render(request, 'index.html', {'authenticate' : True, 'username' : username})
             else:
                 message = 'Invalid credentials'
                 return render(request, 'login.html', {'message' : message, 'reset_wizard' : False})
-        except Exception as e:
+        except mysql.connector.Error as e:
             print(e)
 
         finally:
@@ -63,6 +67,9 @@ def signup(request):
                     db.commit()
                 except mysql.connector.IntegrityError as e:
                     print(e)
+                except mysql.connector.ProgrammingError as e:
+                    print(e)
+                    pass
                 return render(request, 'index.html')
             elif not_valid_username[0][0]:
                 message = 'Username already taken'
@@ -90,12 +97,20 @@ def reset_password(request):
             db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
                                          database=credential['using_db'], host='localhost')
             sql = db.cursor()
-            query = f'select exists(select * from user where username = "{username_request}")'
-            sql.execute(query)
+            try:
+                query = f'select exists(select * from user where username = "{username_request}")'
+                sql.execute(query)
+            except mysql.connector.ProgrammingError as e:
+                print(e)
+                pass
             is_valid_user = sql.fetchall()
             if is_valid_user[0][0]:
-                query = f'select email from user where username = "{username_request}"'
-                sql.execute(query)
+                try:
+                    query = f'select email from user where username = "{username_request}"'
+                    sql.execute(query)
+                except mysql.connector.ProgrammingError as e:
+                    print(e)
+                    pass
                 email = sql.fetchone()[0]
                 password_reset_data['username'] = username_request
                 password_reset_data['secret_key'] = service.send_email(email)
@@ -106,7 +121,7 @@ def reset_password(request):
             elif not is_valid_user[0][0]:
                 return render(request, 'login.html',
                               {'reset_wizard' : True, 'error_message' : "invalid username"})
-        except Exception as e:
+        except mysql.connector.Error as e:
             print(e)
 
         finally:
@@ -123,9 +138,13 @@ def change_password(request):
             db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
                                          database=credential['using_db'], host='localhost')
             sql = db.cursor()
-            query = f'update user set password = md5("{new_password}") ' \
-                    f'where username = "{password_reset_data["username"]}" '
-            sql.execute(query)
+            try:
+                query = f'update user set password = md5("{new_password}") ' \
+                        f'where username = "{password_reset_data["username"]}" '
+                sql.execute(query)
+            except mysql.connector.ProgrammingError as e:
+                print(e)
+                pass
             db.commit()
             return render(request, 'login.html',
                           {'reset_done': True, 'reset_wizard' : False, 'allowed_to_reset_password' : True})

@@ -161,12 +161,23 @@
 }
 
 .row2 button {
-    background: black;
+    background: white;
     border: 2px solid white;
     border-radius: 20px;
     height: 30px;
     width: 100px;
     color: white;
+}
+
+.row2 a
+{
+    color: black;
+}
+
+.row2 a:hover
+{
+    text-decoration: none ;
+    color: black;
 }
 
 
@@ -431,3 +442,73 @@ option {
     width: 142px;
     height: 36px;
 }
+
+#hotel_error_message
+{
+    color: red;
+    font-family: monospace;
+}
+
+#error_message
+{
+    color: red;
+    font-family: monospace;
+    font-size: 16px;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    border-radius: 50px;
+}
+
+.booking_confirmed
+{
+    position: absolute;
+    left : calc(50% - 175px);
+    top : calc(50% - 150px);
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.circle
+{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    background: green;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.circle span
+{
+    position: relative;
+    font-size: 75px;
+    top: -5px;
+}
+
+.booking_confirmed label
+{
+    position: absolute;
+    color: black;
+    font-weight: bolder;
+    left : calc(50% - 110px);
+    top: calc(50% - 90px);
+    font-size: 20px;
+}
+
+.booking_confirmed h6
+{
+    font-size: 20px;
+    position: absolute;
+    left: calc(50% + 130px);
+    top: calc(50% - 140px);
+}
+
+.booking_confirmed h6:hover
+{
+    cursor: pointer;
+}
+
