@@ -34,7 +34,70 @@
                     </div>
                 </li>
             </ul>
-          </nav> 
+        </nav> 
+
+        <div class="bus_headings">
+            <div id="columns">
+                <label>Bus Name</label>
+            </div>
+            <div id="columns">
+                <label>Timings</label>
+            </div>
+            <div id="columns">
+                <label>Amount & Ticket</label>
+            </div>
+            <div id="columns">
+                <label>Journey Date</label>
+            </div>
+            <div id="columns">
+                <label>Booking Date & Time</label>
+            </div>
+        </div>
+
+        {% for bus in bus_bookings %}
+            <div class="bus_bookings">
+                <div id="column_values">
+                    <label>{{bus.busname}}</label>
+                </div>
+                <div id="column_values">
+                    <label>{{bus.departure}}</label><br>
+                    <label>{{bus.arrival}}</label>
+                </div>
+                <div id="column_values">
+                    <label>{{bus.amount}}</label><br>
+                    <label>{{bus.seats}} seats </label>
+                </div>
+                <div id="column_values">
+                    <label>{{bus.journey_date}}</label>
+                </div>
+                <div id="column_values">
+                    <label>{{bus.booking_date}}</label><br>
+                    <label>{{bus.booking_time}}</label>
+                </div>
+                <div>
+                    <button> Cancel Booking </button>
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="hotel_headings">
+            <div id="columns">
+                <label>Hotel Name</label>
+            </div>
+            <div id="columns">
+                <label>Date</label>
+            </div>
+            <div id="columns">
+                <label>Amount Paid</label>
+            </div>
+            <div id="columns">
+                <label>Booking Date & Time</label>
+            </div>
+            <div id="columns">
+                <label>Rooms & Guests</label>
+            </div>
+        </div>
+
     </section>
 </body>
 </html>

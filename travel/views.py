@@ -164,4 +164,6 @@ def change_password(request):
 
 
 def mybookings(request):
-    return render(request, 'mybookings.html')
+    buses = service.buses()
+    hotels = service.hotels()
+    return render(request, 'mybookings.html', {'bus_bookings' : buses, 'username' : service.read_name()})

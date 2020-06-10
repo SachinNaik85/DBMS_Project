@@ -27,14 +27,15 @@
 
             <img id="userimage" class="user" src="{% static 'images/user/user4.png' %}">
             <div class="mybox">
-                <label id="username" onclick="details()">username</label>
+                <label id="username" onclick="details()">{{username}}</label>
 
             </div>
 
             <div class="user_information">
                 <span onclick=" close_usinfo()">&#10005;</span>
                 <br>
-                <button id="mybooking" type="submit" class="mybooking-btn"><label>Mybookings</label></button>
+                <form action="mybookings">
+                    <button id="mybooking" type="submit" class="mybooking-btn"><label>Mybookings</label></button>
                 </form>
                 <form action="logout">
                     <button type="submit"><label>logout</label></button>
@@ -43,7 +44,7 @@
 
         </div>
 
-        {% if True%}
+        {% if authenticate %}
         <script type="text/javascript">
             (
                 function() {

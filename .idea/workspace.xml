@@ -26,12 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/travel/login_status.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Sachin_Naik.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Sachin_Naik.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/mybookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mybookings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/mybookings.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mybookings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/login_status.txt" beforeDir="false" afterPath="$PROJECT_DIR$/travel/login_status.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,12 +256,12 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="signup and login functions added" />
@@ -356,10 +358,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1589628341799" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1586042410277">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1591770902589">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586042410277" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1591770902589" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589603803100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

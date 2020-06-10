@@ -4,6 +4,11 @@
     padding: 0px;
 }
 
+.navbar
+{
+    height: 70px !important;
+}
+
 .Name h2
 {
     color: cyan;
@@ -56,7 +61,6 @@
 .mybox label {
     margin-left: 14px;
     margin-top: 5px;
-    visibility: hidden;
     font-size: 20px;
     color: white;
     font-family: fantasy;
@@ -89,4 +93,90 @@
 .user_information button {
     background: none;
     border: none;
+}
+
+.bus_headings
+{
+    background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+#columns
+{
+    height: 50px;
+    width: 18%;
+    margin-top: 0px;
+    float: left;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+
+.bus_headings label
+{
+    margin-top: 5px;
+}
+
+.bus_bookings
+{
+    background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#column_values
+{
+    height: 60px;
+    width: 18%;
+    float: left;
+    color: white;
+    text-align: center;
+}
+
+.bus_bookings button
+{
+    margin-top: 15px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(darkblue, blue, darkblue);
+    height: 30px;
+    width: 120px;
+    margin-left: 5px;
+}
+
+.hotel_headings
+{
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    background : linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+}
+
+.hotel_bookings
+{
+    background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.hotel_headings label
+{
+    margin-top: 5px;
 }
