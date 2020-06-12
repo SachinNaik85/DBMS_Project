@@ -1,6 +1,7 @@
 import smtplib
-from essential import gmail
+from essential import gmail, credential
 import random
+import mysql.connector
 
 
 def shorten_mail(email):
@@ -72,16 +73,7 @@ def read_name():
 
 
 def buses():
-    class Bus:
-        busname : str
-        journey_date : str
-        amount : str
-        seats : str
-        booking_time : str
-        booking_date : str
-        departure : str
-        arrival : str
-    list = []
+    lst = []
     for i in range(2):
         bus = Bus()
         bus.busname = 'VRL7266'
@@ -92,9 +84,28 @@ def buses():
         bus.booking_time = '06:30 PM'
         bus.departure = '09:30 PM'
         bus.arrival = '07:00 AM'
-        list.append(bus)
-    return list
+        lst.append(bus)
+    return lst
 
 
 def hotels():
     return None
+
+
+def execute_query(query):
+    try:
+        db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
+                                     database=credential['using_db'], host='localhost')
+        sql = db.cursor()
+        try:
+            sql.execute(query)
+            data = sql.fetchall()
+            return data
+        except mysql.connector.ProgrammingError:
+            print(f'error in executing {query}')
+
+    except mysql.connector.Error as e:
+        print(e)
+
+    finally:
+        sql.close()

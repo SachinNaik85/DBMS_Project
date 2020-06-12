@@ -3,6 +3,7 @@ import mysql.connector.errorcode
 from django.shortcuts import render
 from essential import credential
 from travel import service
+from search import bus_and_hotel
 password_reset_data = {}
 
 
@@ -164,6 +165,7 @@ def change_password(request):
 
 
 def mybookings(request):
-    buses = service.buses()
-    hotels = service.hotels()
-    return render(request, 'mybookings.html', {'bus_bookings' : buses, 'username' : service.read_name()})
+    buses = bus_and_hotel.booked_bus()
+    hotels = bus_and_hotel.booked_hotels()
+    return render(request, 'mybookings.html', {'bus_bookings' : buses, 'hotel_bookings' : hotels,
+                                               'username' : service.read_name()})

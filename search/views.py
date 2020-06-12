@@ -117,7 +117,8 @@ def book_hotel(request, hotel_name):
         checkin = request.POST['checkin']
         checkout = request.POST['checkout']
         guests = request.POST['guests']
-
+        rooms = request.POST['rooms']
+        print('fetched data success')
         valid_date = service.checkdate(checkin) and service.checkdate(checkout)
         days = service.count_days(checkin, checkout)
         valid_user = service.auth_user(username, password)
@@ -133,11 +134,12 @@ def book_hotel(request, hotel_name):
                 sql = db.cursor()
                 try:
                     query = f'insert into hotel_bookings values("{hotel_name}", "{username}", "{service.date()}",' \
-                            f'"{service.time()}", "{checkin}", "{checkout}",{guests}, {service.rooms(guests)},' \
-                            f'{service.hotel_price(hotel_name, guests, checkin, checkout)})'
+                            f'"{service.time()}", "{checkin}", "{checkout}", {guests}, {service.calc_rooms(guests, rooms)},' \
+                            f'{service.hotel_price(hotel_name, guests, rooms, checkin, checkout)})'
                     sql.execute(query)
                     db.commit()
                     confirm_status = True
+                    print('returning to booking page')
                     return redirect(to='booking_page')
                 except mysql.connector.ProgrammingError as e:
                     print(e)

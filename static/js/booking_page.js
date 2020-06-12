@@ -38,6 +38,7 @@ function validate_bus() {
     var password_regx = /^(?=.*\d).{4,12}$/
     var seats_regx = /[1-6]{1}/
     var valid = true;
+    console.log(date, username, seats, password);
 
     if (!date_regx.test(date)) {
         valid = false;

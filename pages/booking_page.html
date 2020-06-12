@@ -7,7 +7,6 @@
     <title>Search Page</title>
     <link rel="stylesheet" href="{% static 'css/booking_page.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="{% static 'js/booking_page.js' %}"></script>
 </head>
 
 <body>
@@ -169,7 +168,7 @@
                             <span onclick="hotel_close_model()">&#10006;</span>
                             <h4> Enter your details below </h4>
                             <div class="my-containerr">
-                                <form onsubmit="return validate_hotel()" action="confirm_hotel/{{hotel_name}}" method="post">
+                                <form action="confirm_hotel/{{hotel_name}}" method="post">
                                     {% csrf_token %}
                                     <div id="left">
                                         <label>Check in date</label>
@@ -194,7 +193,7 @@
                                         <label>Check out date</label>
                                         <input id="checkout" type="date" autocomplete="off" name="checkout"> <br><br>
                                         <label>Number of rooms</label><br>
-                                        <select autocomplete="off">
+                                        <select autocomplete="off" name="rooms">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -221,5 +220,5 @@
         <!-- end of my container -->
     </section>
 </body>
-
+<script src="{% static 'js/booking_page.js' %}"></script>
 </html>

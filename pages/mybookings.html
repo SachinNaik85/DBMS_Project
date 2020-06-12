@@ -98,6 +98,32 @@
             </div>
         </div>
 
+        {% for hotel in hotel_bookings %}
+        <div class="hotel_bookings">
+            <div id="column_values">
+                <label>{{hotel.name}}</label>
+            </div>
+            <div id="column_values">
+                <label>CheckIn : {{hotel.checkin}}</label><br>
+                <label>CheckOut : {{hotel.checkout}}</label>
+            </div>
+            <div id="column_values">
+                <label>{{hotel.amount_paid}} INR</label>
+            </div>
+            <div id="column_values">
+                <label>Booking Date :  {{hotel.booking_date}}</label>
+                <label>Booking Time :  {{hotel.booking_time}}</label>
+            </div>
+            <div id="column_values">
+                <label>Rooms : {{hotel.rooms}}</label><br>
+                <label>Guests : {{hotel.guests}}</label>
+            </div>
+
+            <div>
+                <button>Cancel Booking</button>
+            </div>
+        </div>
+        {% endfor %}
     </section>
 </body>
 </html>
