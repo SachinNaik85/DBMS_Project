@@ -1,10 +1,9 @@
 import mysql.connector
 import mysql.connector.errorcode
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import render, redirect
 from essential import credential
 from travel import service
 from search import bus_and_hotel
-import time
 password_reset_data = {}
 ask_to_login = ''
 

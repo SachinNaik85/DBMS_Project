@@ -43,7 +43,7 @@ def date():
 
 def write_file(origin, destination):
     print('writing to file')
-    file = open('search.txt', 'w')
+    file = open('search\search.txt', 'w')
     file.writelines(origin)
     file.writelines('\n')
     file.writelines(destination)
@@ -52,7 +52,7 @@ def write_file(origin, destination):
 
 def read_file():
     print('reading from file')
-    file = open('search.txt', 'r')
+    file = open('search\search.txt', 'r')
     place = file.read().split()
     file.close()
     return place
