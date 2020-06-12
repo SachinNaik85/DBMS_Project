@@ -16,6 +16,10 @@
     <section class="header">
         <div class="container">
             <img src="{% static 'images/logo.png' %}" class="logo">
+            <div class="login_message"> 
+                <label>{{login_message}}</label>
+            </div>
+            
             <form action="signup">
                 {% csrf_token %}
                 <button id="signup" type="submit" class="signup-btn">Sign up</button>

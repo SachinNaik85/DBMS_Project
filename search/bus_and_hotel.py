@@ -1,7 +1,8 @@
 import mysql.connector
 from essential import credential
 from .models import Bus, Hotel, Bus_bookings, Hotel_bookings
-from travel import  service
+from travel import service as travel_service
+from .service import checkdate
 
 
 def create_bus(source, destination):
@@ -63,9 +64,9 @@ def create_hotel(destination):
 
 
 def booked_bus():
-    username = service.read_name()
+    username = travel_service.read_name()
     query = f'select * from bus_bookings where username = "{username}"'
-    booking_data = service.execute_query(query)
+    booking_data = travel_service.execute_query(query)
     buses = []
     for i in booking_data:
         obj = Bus_bookings()
@@ -76,17 +77,18 @@ def booked_bus():
         obj.seats = i[5]
         obj.amount = i[6]
         query = f'select departure_time, arrival_time from bus where busid = "{i[0]}"'
-        bus_time = service.execute_query(query)
+        bus_time = travel_service.execute_query(query)
         obj.departure = bus_time[0][0]
         obj.arrival = bus_time[0][1]
+        obj.journey_not_over = checkdate(i[4])
         buses.append(obj)
     return buses
 
 
 def booked_hotels():
-    username = service.read_name()
+    username = travel_service.read_name()
     query = f'select * from hotel_bookings where username = "{username}"'
-    data = service.execute_query(query)
+    data = travel_service.execute_query(query)
     hotels = []
     for i in data:
         obj = Hotel_bookings()
@@ -98,6 +100,7 @@ def booked_hotels():
         obj.guests = i[6]
         obj.rooms = i[7]
         obj.amount_paid = i[8]
+        obj.checkin_not_over = checkdate(i[4])
         hotels.append(obj)
     return hotels
 
