@@ -15,3 +15,27 @@ class Hotel:
     price = str
     location = str
 
+
+class Bus_bookings:
+    busname : str
+    journey_date : str
+    amount : str
+    seats : str
+    booking_time : str
+    booking_date : str
+    departure : str
+    arrival : str
+    journey_not_over : bool
+
+
+class Hotel_bookings:
+    name = str
+    date = str
+    amount_paid = str
+    rooms = str
+    guests = str
+    booking_date = str
+    booking_time = str
+    checkin = str
+    checkout = str
+    checkin_not_over = bool

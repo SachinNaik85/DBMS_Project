@@ -1,0 +1,204 @@
+*
+{
+    border: 0px;
+    padding: 0px;
+}
+
+.navbar
+{
+    height: 70px !important;
+}
+
+.Name h2
+{
+    color: cyan;
+    position: absolute;
+    left: calc(50% - 130px);
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header
+{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    background:linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7)), url(../images/backgrounds/backg7.jpg);
+}
+
+
+.user {
+    position: absolute;
+    left: calc(85%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid darkblue;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.mybox {
+    position: absolute;
+    left: calc(85% + 40px);
+    margin-top: 5px;
+    height: 40px;
+    width: 130px;
+    background: darkslategray;
+    z-index: 0.9;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: left
+}
+
+.mybox:hover {
+    height: 41px;
+    width: 131px;
+    background: darkgray;
+}
+
+.mybox label {
+    margin-left: 14px;
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+    font-family: fantasy;
+}
+
+.user_information {
+    position: absolute;
+    right: 130px;
+    top: 75px;
+    height: 105px;
+    width: 130px;
+    background: white;
+    border-radius: 2px;
+}
+
+.user_information label {
+    color: black;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid black;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 28px;
+    width: 120px;
+    letter-spacing: 1.5px;
+}
+
+.user_information button {
+    background: none;
+    border: none;
+}
+
+.bus_headings
+{
+    background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+#columns
+{
+    height: 50px;
+    width: 18%;
+    margin-top: 0px;
+    float: left;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+
+.bus_headings label
+{
+    margin-top: 5px;
+}
+
+.bus_bookings
+{
+    background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#column_values
+{
+    height: 60px;
+    width: 18%;
+    float: left;
+    color: white;
+    text-align: center;
+}
+
+.bus_bookings  button
+{
+    margin-top: 15px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(darkblue, blue, darkblue);
+    height: 30px;
+    width: 120px;
+    margin-left: 5px;
+}
+
+.hotel_bookings button
+{
+    margin-top: 15px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(darkblue, blue, darkblue);
+    height: 30px;
+    width: 120px;
+    margin-left: 5px;
+}
+
+.hotel_headings
+{
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    background : linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+}
+
+.hotel_bookings
+{
+    background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+    border-radius: 10px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.hotel_headings label
+{
+    margin-top: 5px;
+}
+
+.cancel_booking
+{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    left: calc(50% - 200px);
+    top: calc(50% - 150px);
+    background: cyan;
+    border-radius: 10px;
+}

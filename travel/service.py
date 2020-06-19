@@ -1,6 +1,7 @@
 import smtplib
-from essential import gmail
+from essential import gmail, credential
 import random
+import mysql.connector
 
 
 def shorten_mail(email):
@@ -38,3 +39,73 @@ def send_email(reciever):
     except Exception as e:
         print('error in sending mail')
 
+
+def read_status():
+    file = open('travel/login_status.txt', 'r')
+    file_data = file.read()
+    file_data = file_data.split()
+    status = bool(int(file_data[0]))
+    file.close()
+    return status
+
+
+def write_status(status, name):
+    file = open('travel/login_status.txt', 'w')
+    line = int(status)
+    file.writelines(str(line))
+    file.writelines('\n')
+    file.writelines(str(name))
+    file.close()
+    return
+
+
+def read_name():
+    file = open('travel/login_status.txt', 'r')
+    try:
+        file_data = file.read()
+        file_data = file_data.split()
+        name = str(file_data[1])
+        return name
+    except IndexError as e:
+        print(e)
+    finally:
+        file.close()
+
+
+def buses():
+    lst = []
+    for i in range(2):
+        bus = Bus()
+        bus.busname = 'VRL7266'
+        bus.journey_date = '10-06-2020'
+        bus.amount = '2000 INR'
+        bus.seats = '2'
+        bus.booking_date = '01-06-2020'
+        bus.booking_time = '06:30 PM'
+        bus.departure = '09:30 PM'
+        bus.arrival = '07:00 AM'
+        lst.append(bus)
+    return lst
+
+
+def hotels():
+    return None
+
+
+def execute_query(query):
+    try:
+        db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
+                                     database=credential['using_db'], host='localhost')
+        sql = db.cursor()
+        try:
+            sql.execute(query)
+            data = sql.fetchall()
+            return data
+        except mysql.connector.ProgrammingError:
+            print(f'error in executing {query}')
+
+    except mysql.connector.Error as e:
+        print(e)
+
+    finally:
+        sql.close()

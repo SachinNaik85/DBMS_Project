@@ -31,10 +31,10 @@ def calc_amount(busname, seats):
             return int(price[0][0]) * int(seats)
         except mysql.connector.ProgrammingError as e:
             print(e)
-            pass
+            return -1
     except mysql.connector.Error as e:
         print(e)
-        pass
+        return -1
 
 
 def date():
@@ -43,7 +43,7 @@ def date():
 
 def write_file(origin, destination):
     print('writing to file')
-    file = open('search.txt', 'w')
+    file = open('search\search.txt', 'w')
     file.writelines(origin)
     file.writelines('\n')
     file.writelines(destination)
@@ -52,7 +52,7 @@ def write_file(origin, destination):
 
 def read_file():
     print('reading from file')
-    file = open('search.txt', 'r')
+    file = open('search\search.txt', 'r')
     place = file.read().split()
     file.close()
     return place
@@ -85,11 +85,14 @@ def count_days(checkin, checkout):
     return (checkout_date - checkin_date).days
 
 
-def rooms(guests):
-    return int(ceil(int(guests)/3))
+def calc_rooms(guests, rooms):
+    if ceil(int(guests)/3) <= int(rooms):
+        return int(rooms)
+    else:
+        return ceil(int(guests)/3)
 
 
-def hotel_price(hotel_name, guests, checkin, checkout):
+def hotel_price(hotel_name, guests, rooms, checkin, checkout):
     try:
         db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'],
                                      database="travel")
@@ -99,7 +102,7 @@ def hotel_price(hotel_name, guests, checkin, checkout):
             query = f'select price from hotel where hotelname = "{hotel_name}"'
             sql.execute(query)
             price = sql.fetchall()
-            return int(price[0][0]) * rooms(guests) * count_days(checkin, checkout)
+            return int(price[0][0]) * calc_rooms(guests, rooms) * count_days(checkin, checkout)
         except mysql.connector.ProgrammingError as e:
             print(e)
             pass

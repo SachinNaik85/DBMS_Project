@@ -7,5 +7,6 @@ urlpatterns = [
     path('signup', views.signup, name="SgininPage"),
     path('logout', views.logout, name="Homepage"),
     path('reset_password', views.reset_password, name="reset_page"),
-    path('change_password', views.change_password, name="change_password")
+    path('change_password', views.change_password, name="change_password"),
+    path('mybookings', views.mybookings, name="my_bookings")
 ]
