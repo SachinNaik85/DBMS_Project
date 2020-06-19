@@ -15,21 +15,21 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-    </expand>
-    <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:sachin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:sachin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-    </select>
+    </expand>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbms/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dbms/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/mybookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mybookings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mybookings.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mybookings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/login_status.txt" beforeDir="false" afterPath="$PROJECT_DIR$/travel/login_status.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +70,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -79,7 +80,7 @@
       <recent name="E:\Sachin\dbms\search" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.service">
+  <component name="RunManager" selected="Python.service (1)">
     <configuration name="bus_and_hotel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dbms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,9 +188,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.service (1)" />
         <item itemvalue="Python.service" />
         <item itemvalue="Python.loaddata" />
-        <item itemvalue="Python.service (1)" />
         <item itemvalue="Python.views" />
         <item itemvalue="Python.bus_and_hotel" />
       </list>
@@ -293,38 +294,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="280" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1586064384350" />
-    <state width="1345" height="212" key="GridCell.Tab.0.bottom" timestamp="1590213640506">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1343" height="175" key="GridCell.Tab.0.bottom" timestamp="1592561786196">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
     <state width="1345" height="212" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590213640506" />
-    <state width="1345" height="212" key="GridCell.Tab.0.center" timestamp="1590213640505">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1343" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1592561786196" />
+    <state width="1343" height="175" key="GridCell.Tab.0.center" timestamp="1592561786194">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
     <state width="1345" height="212" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590213640505" />
-    <state width="1345" height="212" key="GridCell.Tab.0.left" timestamp="1590213640505">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1343" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1592561786194" />
+    <state width="1343" height="175" key="GridCell.Tab.0.left" timestamp="1592561786193">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
     <state width="1345" height="212" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590213640505" />
-    <state width="1345" height="212" key="GridCell.Tab.0.right" timestamp="1590213640506">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1343" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1592561786193" />
+    <state width="1343" height="175" key="GridCell.Tab.0.right" timestamp="1592561786195">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
     <state width="1345" height="212" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590213640506" />
+    <state width="1343" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1592561786195" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1589985921777">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
