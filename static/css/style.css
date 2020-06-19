@@ -19,6 +19,14 @@
     float: left;
 }
 
+.login_message label
+{
+   color: red;
+   font-family: monospace;
+   position: fixed;
+   left: calc(50% - 180px);
+}
+
 .tree {
     width: 250px;
     float: right;

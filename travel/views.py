@@ -1,15 +1,18 @@
 import mysql.connector
 import mysql.connector.errorcode
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from essential import credential
 from travel import service
 from search import bus_and_hotel
 password_reset_data = {}
+ask_to_login = ''
 
 
 def home(request):
-    return render(request, 'index.html',
-                  {'authenticate' : service.read_status(), 'username' : service.read_name()})
+    global ask_to_login
+    dix = {'authenticate' : service.read_status(), 'username' : service.read_name(), 'login_message' : ask_to_login}
+    ask_to_login = ''
+    return render(request, 'index.html', dix)
 
 
 def login(request):
@@ -165,6 +168,10 @@ def change_password(request):
 
 
 def mybookings(request):
+    global ask_to_login
+    if not service.read_status():
+        ask_to_login = 'Please login to view your bookings'
+        return redirect(to='/')
     buses = bus_and_hotel.booked_bus()
     hotels = bus_and_hotel.booked_hotels()
     return render(request, 'mybookings.html', {'bus_bookings' : buses, 'hotel_bookings' : hotels,

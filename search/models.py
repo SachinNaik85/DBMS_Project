@@ -25,6 +25,7 @@ class Bus_bookings:
     booking_date : str
     departure : str
     arrival : str
+    journey_not_over : bool
 
 
 class Hotel_bookings:
@@ -37,3 +38,4 @@ class Hotel_bookings:
     booking_time = str
     checkin = str
     checkout = str
+    checkin_not_over = bool
