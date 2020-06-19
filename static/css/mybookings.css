@@ -144,7 +144,18 @@
     text-align: center;
 }
 
-.header button
+.bus_bookings  button
+{
+    margin-top: 15px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(darkblue, blue, darkblue);
+    height: 30px;
+    width: 120px;
+    margin-left: 5px;
+}
+
+.hotel_bookings button
 {
     margin-top: 15px;
     border-radius: 10px;
@@ -179,4 +190,15 @@
 .hotel_headings label
 {
     margin-top: 5px;
+}
+
+.cancel_booking
+{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    left: calc(50% - 200px);
+    top: calc(50% - 150px);
+    background: cyan;
+    border-radius: 10px;
 }
