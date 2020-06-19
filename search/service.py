@@ -17,7 +17,7 @@ def checkdate(date_):
 def time():
     return str(dt.datetime.time(dt.datetime.now()))[:8]
 
-
+print(time())
 def calc_amount(busname, seats):
     try:
         db = mysql.connector.connect(host="localhost", user="root", passwd=credential['password'],
@@ -31,10 +31,10 @@ def calc_amount(busname, seats):
             return int(price[0][0]) * int(seats)
         except mysql.connector.ProgrammingError as e:
             print(e)
-            pass
+            return -1
     except mysql.connector.Error as e:
         print(e)
-        pass
+        return -1
 
 
 def date():
