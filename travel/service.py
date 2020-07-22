@@ -126,3 +126,8 @@ def packages():
         obj.price = i[5]
         packags.append(obj)
     return packags
+
+
+def booked_packages():
+    username = read_name()
+    data = execute_query(f'select * from package_booking where username = "{username}"')

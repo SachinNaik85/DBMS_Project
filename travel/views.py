@@ -178,6 +178,7 @@ def mybookings(request):
         return redirect(to='/')
     buses = bus_and_hotel.booked_bus()
     hotels = bus_and_hotel.booked_hotels()
+    packages = service.booked_packages()
     return render(request, 'mybookings.html', {'bus_bookings' : buses, 'hotel_bookings' : hotels,
                                                'username' : service.read_name()})
 
@@ -192,10 +193,11 @@ def book_package(request, package_id):
         username = request.POST['username']
         password = request.POST['password']
         guests = request.POST['guests']
+        date = request.POST['journey_date']
         query = f'select exists(select * from user where username = "{username}" and password = md5("{password}"))'
         authenticated = service.execute_query(query)
         try:
-            if not authenticated[0][0]:
+            if not authenticated[0][0] or not search_service.checkdate(date):
                 req_package = package_id
                 return redirect(to='HomePage')
         except IndexError as e:
@@ -208,7 +210,8 @@ def book_package(request, package_id):
             package_price = service.execute_query(f'select price from package where pid = {package_id}')[0][0]
             print(package_price)
             query = f'insert into package_booking values( {package_id}, "{username}", "{search_service.date()}",' \
-                    f'"{search_service.time()}", "{bus}", "{hotel}", {guests}, {int(guests) * int(package_price)})'
+                    f'"{search_service.time()}", "{date}" , "{bus}", "{hotel}", {guests}, ' \
+                    f'{int(guests) * int(package_price)})'
             try:
                 db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
                                              database=credential['using_db'], host='localhost')

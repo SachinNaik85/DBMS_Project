@@ -9,3 +9,6 @@ class package:
     price : str
     image : str
     id : int
+
+class booked_package:
+    pass
