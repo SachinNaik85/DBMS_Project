@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images/packages" as baseUrl %}
 
 <html lang="en">
 
@@ -79,144 +80,46 @@
         <img src="{% static 'images/tree.png' %}" class="tree">
     </section>
 
-    <!--this is starting of features section-->
+    <!--this is starting of package section-->
 
-    <section class="features">
+    <section class="package_section">
         <h1>Packages</h1>
-        <div class="container">
-            <div class="row">
-                <div class="column1">
-                    <div class="feature box">
-                        <div class="feature-image">
-                            <form action="search/Bengaluru" method="POST">
-                                {% csrf_token %}
-                                <button type="submit"><img src="{% static 'images/dest/blore1.jpg' %}"></button>
-                                <div class="price">
-                                    <label><button type="submit">Bengaluru</button></label>
-                                    <p>Rs. 10000</p>
-                                    <h6>3 days, 4 nights</h6>
-                                </div>
-                            </form>
-                            <div class="detail">
-                                <p>
-                                    Bengaluru is one of the most beautiful city<br> Package includes WonderLa and cubbon park <br> Bus and flight service is available
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="column2">
-                    <div class="feature box">
-                        <div class="feature-image">
-                            <form action="search/Coorg" method="POST">
-                                {% csrf_token %}
-                                <button type="submit"><img src="{% static 'images/coorg1.jpg' %}"></button>
-                                <div class="price">
-                                    <label><button type="submit">Coorg</button></label>
-                                    <p>Rs. 12000</p>
-                                    <h6>4 days, 5 nights</h6>
-                                </div>
-                            </form>
-                            <div class="detail">
-                                <p>
-                                    Coorg is a hill town in southern india<br> Package includes Madikeri Fort and Abby falls <br> Bus service is available
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="column3">
-                    <div class="feature box">
-                        <div class="feature-image">
-                            <form action="search/Mumbai" method="POST">
-                                {% csrf_token %}
-                                <button type="submit"><img src="{% static 'images/dest/mumbai3.jpg' %}"></button>
-                                <div class="price">
-                                    <label><button type="submit">Mumbai</button></label>
-                                    <p>Rs. 25000</p>
-                                    <h6>5 days, 6 nights</h6>
-                                </div>
-                            </form>
-                            <div class="detail">
-                                <p>
-                                    Mumbai is India's largest city in west coast <br> Package includes gateway of india and Kanheri <br> caves. Bus and flight service is available
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- this is end of class row 1 -->
-            <br>
-            <div class="row">
-                <div class="column1">
-                    <div class="feature box">
-                        <div class="feature-image">
-                            <form action="search/Kolkatta" method="POST">
-                                {% csrf_token %}
-                                <button type="submit"><img src="{% static 'images/dest/kolkata 2.jpg' %}"></button>
-                                <div class="price">
-                                    <label><button type="submit">Kolkatta</button></label>
-                                    <p>Rs. 20000</p>
-                                    <h6>4 days, 5 nights</h6>
-                                </div>
-                            </form>
-                            <div class="detail">
-                                <p>
-                                    kolkata is known as "The City of Joy".<br> package includes Victoria memorial and Indian<br> Museum. Bus and flight service is available
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column2">
-                    <div class="feature box">
-                        <div class="feature-image">
-                            <form action="search/Manali" method="POST">
-                                {% csrf_token %}
-                                <button type="submit"><img src="{% static 'images/dest/manali.jpg' %}"></button>
-                                <div class="price">
-                                    <label><button type="submit">Manali</button></label>
-                                    <p>Rs. 40000</p>
-                                    <h6>5 days, 6nights </h6>
-                                </div>
-                            </form>
-                            <div class="detail">
-                                <p>
-                                    Manali is a Himalayan resort town in India<br> Package includes Solang and Parvati Valley <br> Bus and Train service is available.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column3">
-                    <div class="feature box">
-                        <div class="feature-image">
-                            <form action="search/Munnar" method="POST">
-                                {% csrf_token %}
-                                <button type="submit"><img src="{% static 'images/dest/munnar2.jpg' %}"></button>
-                                <div class="price">
-                                    <label><button type="submit">Munnar</button></label>
-                                    <p>Rs. 15000</p>
-                                    <h6>3 days, 4 nights</h6>
-                                </div>
-                            </form>
-                            <div class="detail">
-                                <p>
-                                    Munnar is a town in western Ghats <br> package includes Nilgirim tahr and Lakkam <br> Waterfalls. bus and flight service is available
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- this is end of class row 2-->
+        {% if req_package %}
+        <div class="book_package">
+        <form action="{{req_package}}" method="POST">
+            {% csrf_token %}
+            <select autocomplete="off" name="guests">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <br>
+            </select>
+            <input type="text" placeholder="username" name="username">
+            <input type="password" placeholder="password" name="password">
+            <button type="submit">Book Now</button>
+        </form>
         </div>
-    </section>
-    <!--thi is end of featured places seciton-->
+        {% endif %}
 
+        <div class="container">
+            {% for package in packages %}
+            <div class="package_one">
+                <a href="{% url 'package_booking' package.id %}">
+                <h4>{{package.name}}</h4>
+                <img  src="{{baseUrl}}/{{package.image}}" alt="{{package.image}}">
+                </a>
+                <label>You will get {{package.bus}} bus with this package</label>
+                <br>
+                <label>And {{package.hotel}} hotel</label>
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </section>
+    <!--thi is end of package seciton-->
     <section class="testimonials">
         <h1>User Review</h1>
         <div class="container">

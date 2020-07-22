@@ -2,6 +2,7 @@ import smtplib
 from essential import gmail, credential
 import random
 import mysql.connector
+from travel.models import package
 
 
 def shorten_mail(email):
@@ -111,6 +112,17 @@ def execute_query(query):
         sql.close()
 
 
-def packges():
+def packages():
     query = f'select * from package limit 6'
-    return execute_query(query)
+    data = execute_query(query)
+    packags = []
+    for i in data:
+        obj = package()
+        obj.id = i[0]
+        obj.name = i[1]
+        obj.image = i[2]
+        obj.bus = i[3]
+        obj.hotel = i[4]
+        obj.price = i[5]
+        packags.append(obj)
+    return packags

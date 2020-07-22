@@ -1,18 +1,20 @@
 import mysql.connector
 import mysql.connector.errorcode
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from essential import credential
 from travel import service
-from search import bus_and_hotel
+from search import bus_and_hotel, service as search_service
 password_reset_data = {}
 ask_to_login = ''
+req_package = 0
 
 
 def home(request):
-    global ask_to_login
-    packages = service.packges()
-    dix = {'authenticate' : service.read_status(), 'username' : service.read_name(), 'login_message' : ask_to_login
-           'packages' : packages}
+    global ask_to_login, req_package
+    package = service.packages()
+    dix = {'authenticate' : service.read_status(), 'username' : service.read_name(), 'login_message' : ask_to_login,
+           'packages' : package, 'req_package' : req_package}
+    req_package = 0
     ask_to_login = ''
     return render(request, 'index.html', dix)
 
@@ -178,3 +180,46 @@ def mybookings(request):
     hotels = bus_and_hotel.booked_hotels()
     return render(request, 'mybookings.html', {'bus_bookings' : buses, 'hotel_bookings' : hotels,
                                                'username' : service.read_name()})
+
+
+def book_package(request, package_id):
+    global req_package
+    req_package = package_id
+    if request.method == 'GET':
+        return redirect(to='HomePage')
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        guests = request.POST['guests']
+        query = f'select exists(select * from user where username = "{username}" and password = md5("{password}"))'
+        authenticated = service.execute_query(query)
+        try:
+            if not authenticated[0][0]:
+                req_package = package_id
+                return redirect(to='HomePage')
+        except IndexError as e:
+            pass
+        else:
+            bus = service.execute_query(f'select bus from package where pid = {package_id}')[0][0]
+            print(bus)
+            hotel = service.execute_query(f'select hotel from package where pid = {package_id}')[0][0]
+            print(hotel)
+            package_price = service.execute_query(f'select price from package where pid = {package_id}')[0][0]
+            print(package_price)
+            query = f'insert into package_booking values( {package_id}, "{username}", "{search_service.date()}",' \
+                    f'"{search_service.time()}", "{bus}", "{hotel}", {guests}, {int(guests) * int(package_price)})'
+            try:
+                db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
+                                             database=credential['using_db'], host='localhost')
+                sql = db.cursor()
+                try:
+                    sql.execute(query)
+                    db.commit()
+                except mysql.connector.ProgrammingError:
+                    print(f'error in executing {query}')
+
+            except mysql.connector.Error as e:
+                print(e)
+            req_package = 0
+            return redirect(to='HomePage')
