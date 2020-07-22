@@ -179,7 +179,7 @@ def mybookings(request):
     buses = bus_and_hotel.booked_bus()
     hotels = bus_and_hotel.booked_hotels()
     packages = service.booked_packages()
-    return render(request, 'mybookings.html', {'bus_bookings' : buses, 'hotel_bookings' : hotels,
+    return render(request, 'mybookings.html', {'bus_bookings' : buses, 'hotel_bookings' : hotels, 'packages' : packages,
                                                'username' : service.read_name()})
 
 

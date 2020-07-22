@@ -2,7 +2,7 @@ import smtplib
 from essential import gmail, credential
 import random
 import mysql.connector
-from travel.models import package
+from travel.models import package, booked_package
 
 
 def shorten_mail(email):
@@ -73,26 +73,6 @@ def read_name():
         file.close()
 
 
-def buses():
-    lst = []
-    for i in range(2):
-        bus = Bus()
-        bus.busname = 'VRL7266'
-        bus.journey_date = '10-06-2020'
-        bus.amount = '2000 INR'
-        bus.seats = '2'
-        bus.booking_date = '01-06-2020'
-        bus.booking_time = '06:30 PM'
-        bus.departure = '09:30 PM'
-        bus.arrival = '07:00 AM'
-        lst.append(bus)
-    return lst
-
-
-def hotels():
-    return None
-
-
 def execute_query(query):
     try:
         db = mysql.connector.connect(user=credential['db_user'], passwd=credential['password'],
@@ -129,5 +109,17 @@ def packages():
 
 
 def booked_packages():
-    username = read_name()
-    data = execute_query(f'select * from package_booking where username = "{username}"')
+    data = execute_query(f'select * from package_booking where username = "{read_name()}"')
+    packages_booked = []
+    for i in data:
+        obj = booked_package()
+        obj.pid = i[0]
+        obj.booking_date = i[2]
+        obj.booking_time = i[3]
+        obj.journey_date = i[4]
+        obj.bus = i[5]
+        obj.hotel = i[6]
+        obj.guests = i[7]
+        obj.amount_paid = i[8]
+        packages_booked.append(obj)
+    return packages_booked
