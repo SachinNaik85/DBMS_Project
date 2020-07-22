@@ -10,7 +10,9 @@ ask_to_login = ''
 
 def home(request):
     global ask_to_login
-    dix = {'authenticate' : service.read_status(), 'username' : service.read_name(), 'login_message' : ask_to_login}
+    packages = service.packges()
+    dix = {'authenticate' : service.read_status(), 'username' : service.read_name(), 'login_message' : ask_to_login
+           'packages' : packages}
     ask_to_login = ''
     return render(request, 'index.html', dix)
 

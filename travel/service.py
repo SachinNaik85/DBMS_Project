@@ -109,3 +109,8 @@ def execute_query(query):
 
     finally:
         sql.close()
+
+
+def packges():
+    query = f'select * from package limit 6'
+    return execute_query(query)
