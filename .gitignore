@@ -9,3 +9,5 @@ __pycache__
 server.sh
 migrations
 yashu.bat
+dbms/settings.py
+.idea

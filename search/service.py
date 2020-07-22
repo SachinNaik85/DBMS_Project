@@ -31,10 +31,10 @@ def calc_amount(busname, seats):
             return int(price[0][0]) * int(seats)
         except mysql.connector.ProgrammingError as e:
             print(e)
-            pass
+            return -1
     except mysql.connector.Error as e:
         print(e)
-        pass
+        return -1
 
 
 def date():
