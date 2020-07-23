@@ -68,7 +68,7 @@ def read_name():
         name = str(file_data[1])
         return name
     except IndexError as e:
-        print(e)
+        pass
     finally:
         file.close()
 

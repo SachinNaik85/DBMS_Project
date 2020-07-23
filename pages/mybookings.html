@@ -137,7 +137,47 @@
         </div>
         {% endfor %}
 
-        
+        <div class="package_headings">
+            <div id="columns">
+                <label>Package_ID</label>
+            </div>
+            <div id="columns">
+                <label>Jounre Date</label>
+            </div>
+            <div id="columns">
+                <label>Amount Paid & Guests</label>
+            </div>
+            <div id="columns">
+                <label>Booking Date & Time</label>
+            </div>
+            <div id="columns">
+                <label>Bus & Hotel</label>
+            </div>
+        </div>
+
+        {% for package in packages %}
+        <div class="package_bookings">
+            <div id="column_values">
+                <label>{{package.pid}}</label>
+            </div>
+            <div id="column_values">
+                <label>{{package.journey_date}}</label>
+            </div>
+            <div id="column_values">
+                <label>{{package.amount_paid}} INR</label><br>
+                <label>{{package.guests}} seats </label>
+            </div>
+            <div id="column_values">
+                <label>{{package.booking_date}}</label><br>
+                <label>{{package.booking_time}}</label>
+            </div>
+            <div id="column_values">
+                <label>{{package.bus}}</label><br>
+                <label>{{package.hotel}}</label>
+            </div>
+        </div>
+        {% endfor %}
+
     </section>
 </body>
 </html>
