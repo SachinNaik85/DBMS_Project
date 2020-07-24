@@ -82,7 +82,7 @@
                             <h4> Enter your details below </h4>
                             <div class="my-container">
 
-                                <form onsubmit=" return validate_bus()" action="confirm_bus/{{busname}}" method="post">
+                                <form action="confirm_bus/{{busname}}" method="post">
                                     {% csrf_token %}
                                     <div id="left">
                                         <label>Departure date</label>

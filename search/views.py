@@ -96,11 +96,11 @@ def book_bus(request, busname):
                         db.commit()
                         data = travel_service.execute_query(f'select name, email from user '
                                                             f'where username = "{username}"')
-                        t1 = Thread(target=travel_service.confirmation_mail(data[0][0], data[0][1],
-                                                                            **{
-                                                                                'topic': f'Bus with busid {busname} dated {date}, '
-                                                                                         f'for {seats} seats\nTotal amount payable is : '
-                                                                                         f'{service.calc_amount(busname, seats)} INR'}))
+                        departure = travel_service.execute_query(f'select departure_time, destination from bus where busid = "{busname}"')
+                        t1 = Thread(target=travel_service.confirmation_mail(data[0][0], data[0][1], **{
+                                                                                        'topic': f'bus with busname {busname} to {departure[0][1]} dated : {date} for {seats} seats'
+                                                                                        f'\ndeparture time {departure[0][0]}, please reach the boarding place before '
+                                                                                        f'15 minutes of the departure time\nTotal amount payable is {service.calc_amount(busname, seats)} INR'}))
                         confirm_status = True
                         t1.start()
                         return redirect(to='booking_page')

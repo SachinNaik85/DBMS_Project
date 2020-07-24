@@ -5,6 +5,7 @@ from essential import credential
 from travel import service
 from search import bus_and_hotel, service as search_service
 from threading import Thread
+
 password_reset_data = {}
 ask_to_login = ''
 booking_confirmed = False
@@ -14,8 +15,8 @@ req_package = 0
 def home(request):
     global ask_to_login, req_package, booking_confirmed
     package = service.packages()
-    dix = {'authenticate' : service.read_status(), 'username' : service.read_name(), 'login_message' : ask_to_login,
-           'packages' : package, 'req_package' : req_package, 'booking_confirmed' : booking_confirmed}
+    dix = {'authenticate': service.read_status(), 'username': service.read_name(), 'login_message': ask_to_login,
+           'packages': package, 'req_package': req_package, 'booking_confirmed': booking_confirmed}
     booking_confirmed = False
     req_package = 0
     ask_to_login = ''
@@ -25,7 +26,7 @@ def home(request):
 def login(request):
     if request.method == 'GET':
         message = ''
-        return render(request, 'login.html', {'message': message, 'reset_wizard' : False})
+        return render(request, 'login.html', {'message': message, 'reset_wizard': False})
 
     elif request.method == 'POST':
         try:
@@ -44,10 +45,10 @@ def login(request):
             if authenticated[0][0]:
                 service.write_status(1, username)
                 return render(request, 'index.html',
-                              {'authenticate' : service.read_status(), 'username' : service.read_name()})
+                              {'authenticate': service.read_status(), 'username': service.read_name()})
             else:
                 message = 'Invalid credentials'
-                return render(request, 'login.html', {'message' : message, 'reset_wizard' : False})
+                return render(request, 'login.html', {'message': message, 'reset_wizard': False})
         except mysql.connector.Error as e:
             print(e)
 
@@ -104,7 +105,7 @@ def logout(request):
 def reset_password(request):
     global password_reset_data
     if request.method == 'GET':
-        return render(request, 'login.html', {'reset_wizard' : True})
+        return render(request, 'login.html', {'reset_wizard': True})
 
     elif request.method == 'POST':
         username_request = request.POST['username_in_reset']
@@ -134,10 +135,10 @@ def reset_password(request):
                 password_reset_data['email'] = email
                 email = service.shorten_mail(email)
                 return render(request, 'login.html',
-                              {'allowed_to_reset' : True, 'email' : email})
+                              {'allowed_to_reset': True, 'email': email})
             elif not is_valid_user[0][0]:
                 return render(request, 'login.html',
-                              {'reset_wizard' : True, 'error_message' : "invalid username"})
+                              {'reset_wizard': True, 'error_message': "invalid username"})
         except mysql.connector.Error as e:
             print(e)
 
@@ -164,7 +165,7 @@ def change_password(request):
                 pass
             db.commit()
             return render(request, 'login.html',
-                          {'reset_done': True, 'reset_wizard' : False, 'allowed_to_reset_password' : True})
+                          {'reset_done': True, 'reset_wizard': False, 'allowed_to_reset_password': True})
         except mysql.connector.Error as e:
             print(e)
         finally:
@@ -172,8 +173,8 @@ def change_password(request):
 
     elif key_from_user != password_reset_data['secret_key']:
         return render(request, 'login.html',
-                      {'allowed_to_reset' : True, 'email' : password_reset_data['email'],
-                       'error_message' : "invalid key"})
+                      {'allowed_to_reset': True, 'email': password_reset_data['email'],
+                       'error_message': "invalid key"})
 
 
 def mybookings(request):
@@ -184,8 +185,8 @@ def mybookings(request):
     buses = bus_and_hotel.booked_bus()
     hotels = bus_and_hotel.booked_hotels()
     packages = service.booked_packages()
-    return render(request, 'mybookings.html', {'bus_bookings' : buses, 'hotel_bookings' : hotels, 'packages' : packages,
-                                               'username' : service.read_name()})
+    return render(request, 'mybookings.html', {'bus_bookings': buses, 'hotel_bookings': hotels, 'packages': packages,
+                                               'username': service.read_name()})
 
 
 def book_package(request, package_id):
@@ -225,10 +226,12 @@ def book_package(request, package_id):
                     sql.execute(query)
                     db.commit()
                     data = service.execute_query(f'select name, email from user where username = "{username}"')
-                    service.confirmation_mail(data[0][0], data[0][1], **{'topic' : f'package with package id {package_id}'
-                                                                                   f'dated : {date}\nWith this package you are getting {bus} bus and {hotel} hotel '
-                                                                                   f'for {guests} guests\nTotal amount payable is : {int(guests) * int(package_price)} INR'})
+                    t1 = Thread(target=service.confirmation_mail(data[0][0], data[0][1],
+                                                                 **{'topic': f'package with package id {package_id}, '
+                                                                             f'dated : {date}\nWith this package you are getting {bus} bus and {hotel} hotel '
+                                                                             f'for {guests} guests\nTotal amount payable is : {int(guests) * int(package_price)} INR'}))
                     booking_confirmed = True
+                    t1.start()
                 except mysql.connector.ProgrammingError:
                     print(f'error in executing {query}')
                     return redirect(to='HomePage')
