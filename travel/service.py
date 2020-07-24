@@ -3,6 +3,7 @@ from essential import gmail, credential
 import random
 import mysql.connector
 from travel.models import package, booked_package
+from django.shortcuts import redirect
 
 
 def shorten_mail(email):
@@ -14,7 +15,7 @@ def shorten_mail(email):
     return email
 
 
-def send_email(reciever):
+def send_email(receiver, message):
     # creates SMTP session
     try:
         s = smtplib.SMTP('smtp.gmail.com', 587)
@@ -26,19 +27,16 @@ def send_email(reciever):
         s.login(gmail['sender'], gmail['password'])
 
         # message to be sent
-        secret_key = random.randint(100000, 999999)
-        subject = "YES TRAVELS password reset code"
-        text = f"Hello Sir/Madam \n use this code for resetting your password\n {secret_key}"
-        message = 'Subject: {}\n\n{}'.format(subject, text)
 
         # sending the mail
-        s.sendmail(gmail['sender'], reciever, message)
+        s.sendmail(gmail['sender'], receiver, message)
 
         # terminating the session
         s.quit()
-        return secret_key
+        return
     except Exception as e:
-        print('error in sending mail')
+        print('error in sending mail', e)
+        return redirect(to='LoginPage')
 
 
 def read_status():
@@ -123,3 +121,26 @@ def booked_packages():
         obj.amount_paid = i[8]
         packages_booked.append(obj)
     return packages_booked
+
+
+def reset_mail(name, email):
+    secret_key = random.randint(100000, 999999)
+    subject = "YES TRAVELS PASSWORD RESET WIZARD"
+    text = f"Dear {name} \n\n Sorry to hear you're having trouble logging into YES TRAVELS\n" \
+           f"For any support you can reach us through contacts given in the 'HAVE SOME QUESTIONS?' section\n" \
+           f"\n\nFor resetting your password use this security key {secret_key}" \
+           f"\n\nIf you have not requested password reset please ignore this mail" \
+           f"Thanks and Regards," \
+           f"YES TRAVELS"
+    message = 'Subject: {}\n\n{}'.format(subject, text)
+    send_email(email, message)
+    return secret_key
+
+
+def confirmation_mail(name, email, **dix):
+    name1 = name
+    tdix = dix
+    subject = "YES TRAVELS, BOOKING CONFIRMED"
+    text = f"Dear {name1} \n\nYour booking has been confirmed for {tdix['topic']} \n\nThanks and regards,\nYES TRAVELS"
+    message = 'Subject: {}\n\n{}'.format(subject, text)
+    send_email(email, message)

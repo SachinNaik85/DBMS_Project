@@ -15,6 +15,17 @@
 
 <body>
     <section class="header">
+
+        {% if booking_confirmed %}
+        <div class="booking_confirmed">
+            <h6 onclick="close_booking_modal()">&#10060;</h6>
+            <label>BOOKING CONFIRMED</label>
+            <div class="circle">
+                <span>&#10004;</span>
+            </div>
+        </div>
+        {% endif %}
+
         <div class="container">
             <img src="{% static 'images/logo.png' %}" class="logo">
             <div class="login_message"> 

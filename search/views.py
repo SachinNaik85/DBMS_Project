@@ -4,6 +4,9 @@ from search.bus_and_hotel import create_bus, create_hotel
 import mysql.connector
 from essential import credential
 from . import service
+import travel.service as travel_service
+from threading import Thread
+
 redirect_status = False
 confirm_status = False
 credential_error = False
@@ -15,9 +18,10 @@ def home(request):
         origin = request.POST['origin']
         service.write_file(origin, destination)
     except Exception as e:
+        print(e)
         pass
     place = service.read_file()
-    dataset = {'place' : place[1]}
+    dataset = {'place': place[1]}
     return render(request, 'search.html', dataset)
 
 
@@ -26,9 +30,10 @@ def features_home(request, feature_name):
         destination = feature_name
         service.write_file('', destination)
     except Exception as e:
+        print(e)
         pass
     place = service.read_file()
-    dataset = {'place' : place[1]}
+    dataset = {'place': place[1]}
     return render(request, 'search.html', dataset)
 
 
@@ -37,7 +42,7 @@ def booking_request(request):
     place = service.read_file()
     hotels = create_hotel(place[1])
     buses = create_bus(place[0], place[1])
-    dataset = {'buses' : buses, 'hotels' : hotels, 'place' : place[1]}
+    dataset = {'buses': buses, 'hotels': hotels, 'place': place[1]}
     if confirm_status:
         dataset['booking_confirmed'] = True
         confirm_status = False
@@ -73,7 +78,7 @@ def book_bus(request, busname):
             allowed_to_book = service.auth_user(username, password)
             if not allowed_to_book:
                 redirect_status = True
-                return redirect(to='book_bus', busname=busname,)
+                return redirect(to='book_bus', busname=busname, )
 
             if allowed_to_book:
                 fair_date = service.checkdate(date)
@@ -89,7 +94,15 @@ def book_bus(request, busname):
                         print(query)
                         sql.execute(query)
                         db.commit()
+                        data = travel_service.execute_query(f'select name, email from user '
+                                                            f'where username = "{username}"')
+                        t1 = Thread(target=travel_service.confirmation_mail(data[0][0], data[0][1],
+                                                                            **{
+                                                                                'topic': f'Bus with busid {busname} dated {date}, '
+                                                                                         f'for {seats} seats\nTotal amount payable is : '
+                                                                                         f'{service.calc_amount(busname, seats)} INR'}))
                         confirm_status = True
+                        t1.start()
                         return redirect(to='booking_page')
                     except mysql.connector.ProgrammingError as e:
                         print(e)
@@ -142,8 +155,16 @@ def book_hotel(request, hotel_name):
                     print(query)
                     db.commit()
                     confirm_status = True
-                    print('returning to booking page')
+                    data = travel_service.execute_query(f'select name, email from user where username = "{username}"')
+                    amount = service.hotel_price(hotel_name, guests, rooms, checkin, checkout)
+                    t1 = Thread(target=travel_service.confirmation_mail(data[0][0], data[0][1],
+                                                                        **{
+                                                                            'topic': f'Hotel with hotelname {hotel_name} \ndated  checkin : {checkin} '
+                                                                                     f'checkout : {checkout}, for {guests} guests and {rooms} rooms '
+                                                                                     f'\nTotal amount payable is : {amount} INR'}))
+                    t1.start()
                     return redirect(to='booking_page')
+
                 except mysql.connector.ProgrammingError as e:
                     print(e)
                     pass

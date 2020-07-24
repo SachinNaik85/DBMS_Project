@@ -4,16 +4,19 @@ from django.shortcuts import render, redirect, HttpResponse
 from essential import credential
 from travel import service
 from search import bus_and_hotel, service as search_service
+from threading import Thread
 password_reset_data = {}
 ask_to_login = ''
+booking_confirmed = False
 req_package = 0
 
 
 def home(request):
-    global ask_to_login, req_package
+    global ask_to_login, req_package, booking_confirmed
     package = service.packages()
     dix = {'authenticate' : service.read_status(), 'username' : service.read_name(), 'login_message' : ask_to_login,
-           'packages' : package, 'req_package' : req_package}
+           'packages' : package, 'req_package' : req_package, 'booking_confirmed' : booking_confirmed}
+    booking_confirmed = False
     req_package = 0
     ask_to_login = ''
     return render(request, 'index.html', dix)
@@ -118,14 +121,16 @@ def reset_password(request):
             is_valid_user = sql.fetchall()
             if is_valid_user[0][0]:
                 try:
-                    query = f'select email from user where username = "{username_request}"'
+                    query = f'select name, email from user where username = "{username_request}"'
                     sql.execute(query)
                 except mysql.connector.ProgrammingError as e:
                     print(e)
                     pass
-                email = sql.fetchone()[0]
+                data = sql.fetchone()
+                name = data[0]
+                email = data[1]
                 password_reset_data['username'] = username_request
-                password_reset_data['secret_key'] = service.send_email(email)
+                password_reset_data['secret_key'] = service.reset_mail(name, email)
                 password_reset_data['email'] = email
                 email = service.shorten_mail(email)
                 return render(request, 'login.html',
@@ -184,7 +189,7 @@ def mybookings(request):
 
 
 def book_package(request, package_id):
-    global req_package
+    global req_package, booking_confirmed
     req_package = package_id
     if request.method == 'GET':
         return redirect(to='HomePage')
@@ -219,8 +224,14 @@ def book_package(request, package_id):
                 try:
                     sql.execute(query)
                     db.commit()
+                    data = service.execute_query(f'select name, email from user where username = "{username}"')
+                    service.confirmation_mail(data[0][0], data[0][1], **{'topic' : f'package with package id {package_id}'
+                                                                                   f'dated : {date}\nWith this package you are getting {bus} bus and {hotel} hotel '
+                                                                                   f'for {guests} guests\nTotal amount payable is : {int(guests) * int(package_price)} INR'})
+                    booking_confirmed = True
                 except mysql.connector.ProgrammingError:
                     print(f'error in executing {query}')
+                    return redirect(to='HomePage')
 
             except mysql.connector.Error as e:
                 print(e)

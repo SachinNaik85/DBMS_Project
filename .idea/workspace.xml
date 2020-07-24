@@ -19,12 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="">
+    <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="Package bookings work completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mybookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mybookings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/search.txt" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mybookings.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mybookings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/login_status.txt" beforeDir="false" afterPath="$PROJECT_DIR$/travel/login_status.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589628326785</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Package bookings work completed">
+      <created>1595482458849</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595482458849</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -258,7 +269,8 @@
     <MESSAGE value="signup and login functions added" />
     <MESSAGE value="small changes in video call" />
     <MESSAGE value="added urls for hotel and bus" />
-    <option name="LAST_COMMIT_MESSAGE" value="added urls for hotel and bus" />
+    <MESSAGE value="Package bookings work completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Package bookings work completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1586863553949">
@@ -341,10 +353,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1588838167208" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1589628341799">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1595482570449">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1589628341799" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595482570449" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1591961690553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
