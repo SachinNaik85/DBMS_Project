@@ -27,3 +27,10 @@ function close_usinfo() {
         modalpopup[i].style = "visibility: hidden ; filter : blur(0px)";
     }
 }
+
+function close_booking_modal() {
+    var modal = document.getElementsByClassName("booking_confirmed")
+    for (var i = 0; i < modal.length; i++) {
+        modal[i].style = "visibility : hidden";
+    }
+};
