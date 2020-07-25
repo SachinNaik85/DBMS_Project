@@ -228,15 +228,57 @@
     width: 302px;
 }
 
+.package_one label
+{
+    color: black;
+}
+
 /* this is to book a package */
 .book_package
 {
     position: absolute;
     left : calc(50% - 200px);
-    top : calc(50% - 200px);
-    height: 400px;
+    top : calc(50% - 150px);
+    height: 300px;
     width: 400px;
-    background: cyan;
+    background: white;
+    border-radius: 20px;
+}
+
+.book_package .content
+{
+    margin: 30px 20px;
+    align-items: center;
+}
+
+.content input, select
+{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    float: right;
+    text-align: center;
+}
+
+.content select
+{
+    width: 40px;
+}
+.content h5
+{
+    text-align: center;
+}
+
+.content button
+{
+    position: fixed;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(rgba(99, 65, 109, 0.7), rgba(0, 0, 0, 0.8));
+    border-radius: 5px;
+    border: none;
+    color: black;
 }
 
 /* this is begining of about section */

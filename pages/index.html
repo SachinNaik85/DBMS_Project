@@ -98,21 +98,28 @@
 
         {% if req_package %}
         <div class="book_package">
-        <form action="{{req_package}}" method="POST">
-            {% csrf_token %}
-            <select autocomplete="off" name="guests">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <br>
-            </select>
-            
-            <input type="text" placeholder="username" name="username">
-            <input type="password" placeholder="password" name="password">
-            <input type="date" placeholder="journey date" name="journey_date">
-            <button type="submit">Book Now</button>
-        </form>
+            <div class="content">
+                <br><h5>Package Booking</h5>
+            <form action="{{req_package}}" method="POST">
+                {% csrf_token %}
+                <label>Select number of persons</label>
+                <select autocomplete="off" name="guests">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <br>
+                </select>
+                
+                <br><label>Select Journey date</label>
+                <input type="date" name="journey_date">
+                <br><label>Enter username   </label>
+                <input type="text" name="username">
+                <br><label>Enter password   </label>
+                <input type="password" name="password">
+                <br><button type="submit">Book Now</button>
+            </form>
+            </div>
         </div>
         {% endif %}
 
@@ -120,12 +127,12 @@
             {% for package in packages %}
             <div class="package_one">
                 <a href="{% url 'package_booking' package.id %}">
-                <h4>{{package.name}}</h4>
+                <h3>{{package.name}}</h3>
                 <img  src="{{baseUrl}}/{{package.image}}" alt="{{package.image}}">
                 </a>
-                <label>You will get {{package.bus}} bus with this package</label>
+                <label>Bus : {{package.bus}}</label>
                 <br>
-                <label>And {{package.hotel}} hotel</label>
+                <label>Hotel : {{package.hotel}}</label>
             </div>
             {% endfor %}
         </div>
