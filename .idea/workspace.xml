@@ -22,8 +22,10 @@
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="Package bookings work completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/booking_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/booking_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/search.txt" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/search/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/login_status.txt" beforeDir="false" afterPath="$PROJECT_DIR$/travel/login_status.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
@@ -293,42 +295,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1595421424138" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1593350280356">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1595740333594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593350280356" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1595418700140">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595740333594" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1595739505947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595418700140" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1595418700140">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595739505947" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1595739505947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595418700140" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1595418700140">
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595739505947" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1595739505946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595418700140" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1595418700140">
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595739505946" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1595739505947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1589089436379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595418700140" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595739505947" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1589985921777">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

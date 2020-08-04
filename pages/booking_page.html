@@ -86,14 +86,14 @@
                                     {% csrf_token %}
                                     <div id="left">
                                         <label>Departure date</label>
-                                        <input type="date" autocomplete="off" name="date" id="departuredate"> <br><br>
+                                        <input required type="date" autocomplete="off" name="date" id="departuredate"> <br><br>
                                         <label>Username</label>
-                                        <input type="text" name="username" id="BusUsername" autocomplete="off">
+                                        <input required type="text" name="username" id="BusUsername" autocomplete="off">
                                     </div>
 
                                     <div id="right">
                                         <label>Number of seats</label><br>
-                                        <select autocomplete="off" name="seats" id="seats">
+                                        <select required autocomplete="off" name="seats" id="seats">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -101,7 +101,7 @@
                                                 <br>
                                         </select><br><br>
                                         <label> password</label>
-                                        <input type="password" autocomplete="off" name="password" id="password">
+                                        <input required type="password" autocomplete="off" name="password" id="password">
                                     </div>
                                     <label id="error_message">{{error_message}}</label><br>
                                     <button type="submit">Confirm booking</button>
@@ -172,7 +172,7 @@
                                     {% csrf_token %}
                                     <div id="left">
                                         <label>Check in date</label>
-                                        <input id="checkin" type="date" autocomplete="off" name="checkin"> <br><br>
+                                        <input required id="checkin" type="date" autocomplete="off" name="checkin"> <br><br>
                                         <label>Number of guests</label><br>
                                         <select autocomplete="off"  name="guests" id="guests">
                                                 <option value="1">1</option>
@@ -186,12 +186,12 @@
                                                 <br>
                                         </select><br><br>
                                         <label>Username</label>
-                                        <input id="HotelUsername" type="text"  name="username" autocomplete="off">
+                                        <input required id="HotelUsername" type="text"  name="username" autocomplete="off">
                                     </div>
 
                                     <div id="right">
                                         <label>Check out date</label>
-                                        <input id="checkout" type="date" autocomplete="off" name="checkout"> <br><br>
+                                        <input required id="checkout" type="date" autocomplete="off" name="checkout"> <br><br>
                                         <label>Number of rooms</label><br>
                                         <select autocomplete="off" name="rooms">
                                                 <option value="1">1</option>
@@ -201,7 +201,7 @@
                                                 <br>
                                         </select><br><br>
                                         <label> password</label>
-                                        <input id="hotel_password" type="password" autocomplete="off" name="password">
+                                        <input required id="hotel_password" type="password" autocomplete="off" name="password">
                                     </div>
                                     <br><label id="hotel_error_message"> {{error_message}} </label><br>
                                     <button type="submit">Confirm booking</button>

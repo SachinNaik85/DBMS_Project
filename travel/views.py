@@ -18,7 +18,7 @@ def home(request):
     dix = {'authenticate': service.read_status(), 'username': service.read_name(), 'login_message': ask_to_login,
            'packages': package, 'req_package': req_package, 'booking_confirmed': booking_confirmed}
     booking_confirmed = False
-    req_package = 0
+    req_package = False
     ask_to_login = ''
     return render(request, 'index.html', dix)
 

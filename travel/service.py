@@ -92,10 +92,17 @@ def execute_query(query):
 
 
 def packages():
-    query = f'select * from package limit 6'
+    query = f'select * from package'
     data = execute_query(query)
+    select = []
+    for i in range(6):
+        ele = random.randint(0, len(data)-1)
+        while ele in select:
+            ele = random.randint(0, len(data)-1)
+        select.append(ele)
     packags = []
-    for i in data:
+    for _ in select:
+        i = data[_]
         obj = package()
         obj.id = i[0]
         obj.name = i[1]

@@ -82,8 +82,8 @@
         <form onsubmit="return is_valid_search()" action="search" method="post">
             {% csrf_token %}
             <div class="inputs">
-                <input id="from" autocomplete="off" type="text" placeholder="From" name="origin">
-                <input id="to" autocomplete="off" type="text" placeholder="city or place you want to visit" name="destination">
+                <input id="from" autocomplete="off" type="text" placeholder="From" name="origin" required>
+                <input id="to" autocomplete="off" type="text" placeholder="city or place you want to visit" name="destination" required>
                 <br>
                 <button type="submit">Search</button>
             </div>
