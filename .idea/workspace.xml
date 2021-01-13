@@ -21,11 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="64c6bf94-93a7-40bf-a989-908658d9e499" name="Default Changelist" comment="Package bookings work completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/booking_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/booking_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbms/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dbms/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/search.txt" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/login_status.txt" beforeDir="false" afterPath="$PROJECT_DIR$/travel/login_status.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/booking_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/booking_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/views.py" afterDir="false" />
     </list>
@@ -194,6 +193,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -277,111 +277,5 @@
     <MESSAGE value="added urls for hotel and bus" />
     <MESSAGE value="Package bookings work completed" />
     <option name="LAST_COMMIT_MESSAGE" value="Package bookings work completed" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589174878638">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1589174878638" />
-    <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589004526359">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1589004526359" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1589628324957">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589628324957" />
-    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1595421424138">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1595421424138" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1595740333594">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595740333594" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1595739505947">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1589089436379">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595739505947" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1595739505947">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1589089436379">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.center.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595739505947" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1595739505946">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1589089436379">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.left.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595739505946" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1595739505947">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1589089436379">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1366" height="267" key="GridCell.Tab.0.right.inPresentationMode/0.0.1366.728@0.0.1366.728" timestamp="1589089436379" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595739505947" />
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1589985921777">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589985921777" />
-    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1589985921777">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589985921777" />
-    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1589985921777">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589985921777" />
-    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1589985921777">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589985921777" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1591971923637">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591971923637" />
-    <state x="530" y="278" key="VCS.ChangelistChooser" timestamp="1588838167208">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="530" y="278" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1588838167208" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1595572335577">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595572335577" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1591961690553">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1591961690553" />
-    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589603803100">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1589603803100" />
-    <state x="385" y="152" key="git4idea.merge.GitPullDialog" timestamp="1589603823647">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="385" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1589603823647" />
-    <state x="464" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1589003154663">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="464" y="265" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589003154663" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587190178494">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587190178494" />
-    <state x="405" y="276" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587566556246">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="405" y="276" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1366.728@0.0.1366.728" timestamp="1587566556246" />
   </component>
 </project>

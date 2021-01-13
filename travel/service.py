@@ -79,7 +79,7 @@ def execute_query(query):
         try:
             sql.execute(query)
             data = sql.fetchall()
-            print(data)
+            # print(data)
             return data
         except mysql.connector.ProgrammingError:
             print(f'error in executing {query}')

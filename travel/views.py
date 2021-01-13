@@ -15,12 +15,12 @@ req_package = 0
 def home(request):
     global ask_to_login, req_package, booking_confirmed
     package = service.packages()
-    dix = {'authenticate': service.read_status(), 'username': service.read_name(), 'login_message': ask_to_login,
+    data = {'authenticate': service.read_status(), 'username': service.read_name(), 'login_message': ask_to_login,
            'packages': package, 'req_package': req_package, 'booking_confirmed': booking_confirmed}
     booking_confirmed = False
     req_package = False
     ask_to_login = ''
-    return render(request, 'index.html', dix)
+    return render(request, 'index.html', data)
 
 
 def login(request):
