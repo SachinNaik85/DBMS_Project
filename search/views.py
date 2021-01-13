@@ -138,7 +138,7 @@ def book_hotel(request, hotel_name):
         days = service.count_days(checkin, checkout)
         valid_user = service.auth_user(username, password)
 
-        if not valid_user or not valid_date or not days:
+        if not valid_user or not valid_date or days < 1:
             credential_error = True
             return redirect(to='book_hotel', hotel_name=hotel_name)
 
