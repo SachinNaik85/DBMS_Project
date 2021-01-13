@@ -161,12 +161,12 @@
 }
 
 .row2 button {
-    background: black;
+    background: white;
     border: 2px solid white;
     border-radius: 20px;
     height: 30px;
     width: 100px;
-    color: white;
+    color: black;
 }
 
 .row2 a
@@ -248,12 +248,23 @@
 }
 
 .hotel-field-values button {
-    background: black;
+    background: white;
     border: 2px solid white;
     border-radius: 20px;
     height: 30px;
     width: 100px;
-    color: white;
+    color: black;
+}
+
+.hotel-field-values a
+{
+    color: black;
+}
+
+.hotel-field-values a:hover
+{
+    text-decoration: none ;
+    color: black;
 }
 
 

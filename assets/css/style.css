@@ -19,6 +19,14 @@
     float: left;
 }
 
+.login_message label
+{
+   color: red;
+   font-family: monospace;
+   position: fixed;
+   left: calc(50% - 180px);
+}
+
 .tree {
     width: 250px;
     float: right;
@@ -72,7 +80,7 @@
     width: 130px;
     background: darkslategray;
     z-index: 0.9;
-    border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     text-align: left
 }
@@ -81,6 +89,7 @@
     height: 41px;
     width: 131px;
     background: darkgray;
+    color : black;
 }
 
 .mybox label {
@@ -90,6 +99,19 @@
     font-size: 20px;
     color: white;
     font-family: fantasy;
+}
+
+.user_information span {
+    font-size: 15px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 2px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.user_information span:hover {
+    cursor: pointer;
 }
 
 .user_information {
@@ -147,7 +169,7 @@
 }
 
 
-/* this h2 for is printing let us take you away */
+/* this h2 for is printing Put the roaming mode on..! */
 
 .header h2 {
     font-weight: 400;
@@ -157,95 +179,107 @@
     color: white;
 }
 
+/* packages starts here */
 
-/* features starts here */
+.package_section
+{
+    width: 100%;
+    height: 170%;
+}
 
-.features {
-    padding: 70px 0px;
+.package_section h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: black;
+}
+
+
+.package_one
+{
+    text-align: center;
+    float: left;
+    margin: 15px 15px;
+    height: 400px;
+    width: 30%;
+}
+
+.package_one a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.package_one a:hover
+{
+    text-decoration: none;
+    color: black;
+}
+
+.package_one img
+{
+    height: 300px;
+    width: 300px;
+}
+
+.package_one img:hover
+{
+    height: 302px;
+    width: 302px;
+}
+
+.package_one label
+{
+    color: black;
+}
+
+/* this is to book a package */
+.book_package
+{
+    position: absolute;
+    left : calc(50% - 200px);
+    top : calc(50% - 150px);
+    height: 300px;
+    width: 400px;
     background: white;
+    border-radius: 20px;
 }
 
-
-/* this is to print "featured destination" */
-
-.features h1 {
-    font-weight: 400;
-    text-align: center;
-    font-size: 60px;
-    color: black;
-}
-
-.row {
-    padding: 20px 0px;
-}
-
-.feature-image img {
-    width: 348px;
-    height: 248px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.price label
-/* this is place name*/
-
+.book_package .content
 {
-    font-weight: 100;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: -5px;
-    color: black;
-    font-size: 25px;
-    font-family: serif;
+    margin: 30px 20px;
+    align-items: center;
 }
 
-.feature-image button {
-    border: none;
+.content input, select
+{
     background: transparent;
-    color: black;
-}
-
-.feature-image label:hover {
-    cursor: default;
-    font-size: 26px;
-}
-
-.feature-image img:hover {
-    width: 350px;
-    height: 250px;
-    transition-duration: 0.2s;
-}
-
-.price p
-/* this is for printing the price */
-
-{
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: -5px;
-    width: 90px;
-    height: 30px;
+    border: 1px solid black;
     border-radius: 5px;
+    float: right;
     text-align: center;
-    padding: 2px;
-    background-image: repeating-radial-gradient(cyan, skyblue, gray);
-    color: black;
-    font-size: 18px;
-    font-weight: 600;
 }
 
-.detail {
-    margin-left: 15px;
-    margin-right: 15px;
-    color: black;
+.content select
+{
+    width: 40px;
+}
+.content h5
+{
+    text-align: center;
 }
 
-.price h6 {
-    margin-left: 15px;
-    margin-right: 15px;
+.content button
+{
+    position: fixed;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(rgba(99, 65, 109, 0.7), rgba(0, 0, 0, 0.8));
+    border-radius: 5px;
+    border: none;
     color: black;
 }
-
 
 /* this is begining of about section */
 
@@ -362,4 +396,59 @@ h1 {
 
 .contact-us label {
     font-size: 15px;
+}
+
+/* booking confirmed */
+.booking_confirmed
+{
+    position: absolute;
+    left : calc(50% - 175px);
+    top : calc(50% - 150px);
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.circle
+{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    background: green;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.circle span
+{
+    position: relative;
+    font-size: 75px;
+    top: -5px;
+}
+
+.booking_confirmed label
+{
+    position: absolute;
+    color: black;
+    font-weight: bolder;
+    left : calc(50% - 110px);
+    top: calc(50% - 90px);
+    font-size: 20px;
+}
+
+.booking_confirmed h6
+{
+    font-size: 20px;
+    position: absolute;
+    left: calc(50% + 130px);
+    top: calc(50% - 140px);
+}
+
+.booking_confirmed h6:hover
+{
+    cursor: pointer;
 }
