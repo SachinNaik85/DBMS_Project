@@ -60,13 +60,15 @@ def book_bus(request, busname):
                    'booking_request': True, 'busname': busname, }
         if redirect_status:
             redirect_status = False
-            dataset['error_message'] = "Invalid credentials"
+            dataset['error_message'] = "Please login"
 
         return render(request, 'booking_page.html', dataset)
 
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        if not travel_service.read_status():
+            redirect_status = True
+            return redirect(to='book_bus', busname=busname,)
+        username = travel_service.read_name()
         date = request.POST['date']
         seats = request.POST['seats']
 
@@ -75,12 +77,12 @@ def book_bus(request, busname):
                                          passwd=credential['password'], database=credential['using_db'])
             sql = db.cursor()
 
-            allowed_to_book = service.auth_user(username, password)
-            if not allowed_to_book:
-                redirect_status = True
-                return redirect(to='book_bus', busname=busname, )
+            # allowed_to_book = service.auth_user(username, password)
+            # if not allowed_to_book:
+            #     redirect_status = True
+            #     return redirect(to='book_bus', busname=busname, )
 
-            if allowed_to_book:
+            if travel_service.read_status():
                 fair_date = service.checkdate(date)
                 if not fair_date:
                     return redirect('book_bus', busname=busname)
@@ -122,21 +124,22 @@ def book_hotel(request, hotel_name):
         dataset = {'place': place[1], 'buses': buses,
                    'hotels': hotels, 'hotel_request': True, 'hotel_name': hotel_name}
         if credential_error:
-            dataset['error_message'] = "Invalid credentials"
+            dataset['error_message'] = "Please login"
             credential_error = False
         return render(request, 'booking_page.html', dataset)
 
     elif request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        # username = request.POST['username']
+        # password = request.POST['password']
+        if travel_service.read_status():
+            username = travel_service.read_name()
         checkin = request.POST['checkin']
         checkout = request.POST['checkout']
         guests = request.POST['guests']
         rooms = request.POST['rooms']
-        print('fetched data success')
         valid_date = service.checkdate(checkin) and service.checkdate(checkout)
         days = service.count_days(checkin, checkout)
-        valid_user = service.auth_user(username, password)
+        valid_user = travel_service.read_status()
 
         if not valid_user or not valid_date or days < 1:
             credential_error = True
