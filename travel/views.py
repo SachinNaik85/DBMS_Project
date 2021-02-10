@@ -44,8 +44,7 @@ def login(request):
             authenticated = sql.fetchall()
             if authenticated[0][0]:
                 service.write_status(1, username)
-                return render(request, 'index.html',
-                              {'authenticate': service.read_status(), 'username': service.read_name()})
+                return redirect(to='HomePage')
             else:
                 message = 'Invalid credentials'
                 return render(request, 'login.html', {'message': message, 'reset_wizard': False})
@@ -85,7 +84,7 @@ def signup(request):
                 except mysql.connector.ProgrammingError as e:
                     print(e)
                     pass
-                return render(request, 'index.html')
+                return redirect(to='HomePage')
             elif not_valid_username[0][0]:
                 message = 'Username already taken'
                 return render(request, 'signin.html', {'error_message': message})
