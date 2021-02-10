@@ -195,19 +195,16 @@ def book_package(request, package_id):
         return redirect(to='HomePage')
 
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
         guests = request.POST['guests']
         date = request.POST['journey_date']
-        query = f'select exists(select * from user where username = "{username}" and password = md5("{password}"))'
-        authenticated = service.execute_query(query)
         try:
-            if not authenticated[0][0] or not search_service.checkdate(date):
+            if not service.read_status() or not search_service.checkdate(date):
                 req_package = package_id
                 return redirect(to='HomePage')
         except IndexError as e:
             pass
         else:
+            username = service.read_name()
             bus = service.execute_query(f'select bus from package where pid = {package_id}')[0][0]
             print(bus)
             hotel = service.execute_query(f'select hotel from package where pid = {package_id}')[0][0]
